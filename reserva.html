@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva</title>
+    <link rel="icon" type="image/png" href="./logospacey-icono.png">
+    <link rel="stylesheet" href="./reserva.css" type="text/css">
+</head>
+
+<body>
+
+    <header>
+
+
+        <nav>
+
+            <ul>
+                <li><img src="./logospacey-removebg-preview.png" width="300" height="200" alt="SpaceY"
+                        title="SpaceY Logo">
+                </li>
+                <li><a href="#Cohetes">Cohetes</a></li>
+                <li><a href="#Reservas">Reservas</a></li>
+                <li><a id="#Contanct" href="#contact">Contact</a></li>
+            </ul>
+
+        </nav>
+
+
+        <aside id="sidebar">
+            <span class="close-btn" onclick="toggleMenu()">&times;</span>
+            <a href="#">MISSION</a>
+            <a href="#">LAUNCHES</a>
+            <a href="#">CAREERS</a>
+            <a href="#">UPDATES</a>
+            <a href="#">SHOP</a>
+        </aside>
+
+    </header>
+
+    <div class="pepe">
+        <form action="#" method="post">
+
+            Nombre<input required type="text" name="nombre" placeholder="Nombre*">
+            Apellidos<input required type="text" name="apellidos" placeholder="Apellidos*"><br>
+            Correo electrónico<input required type="email" name="correo" placeholder="Correo Electrónico*">
+            Número de teléfono<input type="text" name="telefono" placeholder="Teléfono"><br>
+            Fecha de salida*<input requiried type="date" name="fechaini" placeholder="Fecha">
+            Fecha de llegada*<input required type="date" name="fechafin" placeholder="Hora"><br>
+            Número de Personas*<input type="number" name="quantity" min="1" max="5" value="1">
+            Selector de cohetes*<select name="cohetes">
+                <option value="" disabled selected>Selecciona una opción</option>
+                <option value="falcon">Falcon</option>
+                <option value="starship">Starship</option>
+                <option value="saturno">Saturno</option>
+            </select><br>
+            <button type="submit" value="Reservar">enviar</button>
+            
+        </form>
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>
