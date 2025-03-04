@@ -1,11 +1,11 @@
 
 @font-face {
     font-family: 'antonio';
-    src: url("./fonts/Antonio-SemiBold.ttf") format(Truetype);
+    src: url("./images/Antonio-SemiBold.ttf") format(Truetype);
 }
 
 body{
-    background: url('./imgs/cuete.png') no-repeat center center/cover; /* ✅ Imagen de fondo */
+    background: url('./images/cuete.png') no-repeat center center/cover; /* ✅ Imagen de fondo */
     background-size: cover; /* ✅ La imagen se ajusta al ancho y mantiene la proporción */
     background-attachment: fixed; /* ✅ Para que el fondo se quede fijo */
     color: #E8ECF3;
