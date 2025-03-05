@@ -1,0 +1,69 @@
+
+
+.cohetes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    transition: transform 0.5s;
+
+}
+
+.cohetes-container {
+    /* Tamaño del carrusel (3 imágenes de 200px c/u) */
+    overflow: hidden;
+    position: relative;
+    border: 2px solid black;
+}
+
+
+
+.cohete {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+  }
+  
+  .cohete:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    width: 80%;
+  }
+
+  .cohete>img{
+
+    width: 50%;
+    height: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border: 10px solid transparent;
+    border-color: aqua;
+
+  }
+  
+  .container {
+    padding: 2px 16px;
+    text-align: center;
+  }
+
+
+
+
+
+
+/* Botones */
+.btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 10;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
