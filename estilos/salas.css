@@ -1,69 +1,145 @@
-
-
-.cohetes{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    transition: transform 0.5s;
-
-}
-
+/* Contenedor del carrusel */
 .cohetes-container {
-    /* Tamaño del carrusel (3 imágenes de 200px c/u) */
-    overflow: hidden;
-    position: relative;
-    border: 2px solid black;
+  overflow: hidden;
+  position: relative;
+  border: 2px solid black;
+  width: 80%;
+  margin: auto;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* Fondo degradado */
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
+/* Contenedor de cohetes */
+.cohetes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  transition: transform 0.5s;
+  gap: 20px; /* Espaciado entre los cohetes */
+}
 
-
+/* Tarjetas de los cohetes */
 .cohete {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    width: 40%;
-  }
-  
-  .cohete:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    width: 80%;
-  }
+  flex-basis: 30%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1); /* Fondo translúcido */
+  border-radius: 12px;
+  padding: 15px;
+}
 
-  .cohete>img{
+.cohete:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
 
-    width: 50%;
-    height: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    border: 10px solid transparent;
-    border-color: aqua;
+/* Imágenes de los cohetes */
+.cohete > img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border: 5px solid rgb(75, 157, 157);
+  display: block;
+  border-radius: 10px;
+}
 
-  }
-  
-  .container {
-    padding: 2px 16px;
-    text-align: center;
-  }
+/* Contenedor de texto dentro de las tarjetas */
+.container {
+  padding: 15px;
+  text-align: center;
+}
 
+.container h4 {
+  margin: 10px 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(75, 157, 157);
+}
 
+.container p {
+  font-size: 14px;
+  line-height: 1.6;
+}
 
-
-
-
-/* Botones */
+/* Botones del carrusel */
 .btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 24px;
-    z-index: 10;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 10;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .prev { left: 10px; }
 .next { right: 10px; }
+
+ /* Contenedor de la sección de cohetes */
+.section-cohetes {
+  width: 80%;
+  margin: 40px auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #1e3c72, #2a5298); /* Fondo degradado azul */
+  border-radius: 15px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+/* Estilo de la tabla */
+.table-cohetes {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.1); /* Fondo translúcido */
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Encabezados de la tabla */
+.table-cohetes th {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 18px;
+  padding: 12px;
+}
+
+/* Filas de la tabla */
+.table-cohetes td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 16px;
+}
+
+/* Alternar colores en filas */
+.table-cohetes tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Última fila sin borde */
+.table-cohetes tr:last-child td {
+  border-bottom: none;
+}
+
+/* Resaltar al pasar el cursor */
+.table-cohetes tr:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transition: 0.3s;
+}
+
