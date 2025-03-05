@@ -1,11 +1,15 @@
-// Selecciona el nav
-const nav = document.getElementById('menunavegador');
+window.addEventListener("scroll", function () {
+    let navbar = document.getElementById("menunavegador");
+    let asides = document.getElementById("sidebar");
+    
 
-// Función para cambiar el color del fondo al hacer scroll
-window.addEventListener('scroll', () => {
-    if (window.scrollY >10) { // Si se hace scroll más de 50px
-        nav.classList.add('nav-scroll'); // Añadir la clase nav-scroll que cambia el fondo
+    if (window.scrollY > 50) { // Cambia si el usuario baja 50px
+        navbar.classList.add("scroll");
+        asides.classList.add("scroll");
+         
     } else {
-        nav.classList.remove('nav-scroll'); // Si no se ha hecho scroll, quitar la clase
+        navbar.classList.remove("scroll"); 
+        asides.classList.remove("scroll"); 
+        
     }
 });
