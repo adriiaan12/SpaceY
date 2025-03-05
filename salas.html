@@ -5,38 +5,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="images/logospacey-icono.png">
-    <link href="estilos/general.css" rel="stylesheet" type="text/css">  
+    <link href="estilos/general.css" rel="stylesheet" type="text/css">
     <link href="estilos/salas.css" rel="stylesheet" type="text/css">
     <title>Cohetes</title>
 
-    <nav>
 
-        <ul>
-            <li><img class="logo" src="images/SpaceY.png" width="300" height="200" alt="SpaceY" title="SpaceY Logo"></li>
-            <li><a href="#Cohetes">Cohetes</a></li>
-            <li><a href="#Reservas">Reservas</a></li>
-            <li><a id="#Contact" href="#contact">Contact</a></li>
-        </ul>
-
-    </nav>
-
-    <!-- Botón lateral -->
-    <div class="toggle-btn">Menú</div>
-
-    <!-- Aside desplegable -->
-    <aside>
-        <h2>Menú</h2>
-        <p>Bienvenido a la sección lateral.</p>
-        <ul>
-            <li>Inicio</li>
-            <li>Servicios</li>
-            <li>Contacto</li>
-        </ul>
-    </aside>
 
 </head>
 
 <body>
+
+    <header>
+
+
+        <nav class="nav-links" id="menunavegador">
+            <a href="./index.html"><img class="logo" src="./images/logospacey-remove.png" alt="SpaceY"
+                    title="SpaceY Logo"></a>
+            <ul>
+    
+                <li><a href="./salas.html">Cohetes</a></li>
+                <li><a href="./reserva.html">Reservas</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="menu-btn" onclick="toggleMenu()">&#9776;</button>
+    
+        </nav>
+    
+        <!-- Aside desplegable -->
+    
+    
+    
+    </header>
+    <aside id="sidebar" class="sidebar">
+    
+        <a href="#">MISSION</a>
+        <a href="#">LAUNCHES</a>
+        <a href="#">CAREERS</a>
+        <a href="#">UPDATES</a>
+        <a href="#">SHOP</a>
+    </aside>
     <section>
 
         <h2>Cohetes</h2>
@@ -48,7 +55,10 @@
                     <img src="images/Falcon9.jpg" alt="Avatar">
                     <div class="container">
                         <h4><b>Falcon9</b></h4>
-                        <p>El Falcon 9 es un cohete reutilizable de dos etapas diseñado y fabricado por SpaceX. Es utilizado para el transporte seguro y eficiente de satélites, así como para el envío de la nave espacial Dragon a la órbita terrestre. Su diseño innovador permite la recuperación y reutilización de la primera etapa, reduciendo costos de lanzamiento.</p>
+                        <p>El Falcon 9 es un cohete reutilizable de dos etapas diseñado y fabricado por SpaceX. Es
+                            utilizado para el transporte seguro y eficiente de satélites, así como para el envío de la
+                            nave espacial Dragon a la órbita terrestre. Su diseño innovador permite la recuperación y
+                            reutilización de la primera etapa, reduciendo costos de lanzamiento.</p>
                     </div>
                 </div>
 
@@ -56,7 +66,9 @@
                     <img src="images/SaturnV.avif" alt="Avatar">
                     <div class="container">
                         <h4><b>SaturnV</b></h4>
-                        <p>El Saturn V fue un cohete de lanzamiento superpesado desarrollado por la NASA entre 1967 y 1973. Es el cohete más grande y potente que ha volado con éxito, y fue el vehículo utilizado en las misiones Apolo que llevaron a los primeros humanos a la Luna.</p>
+                        <p>El Saturn V fue un cohete de lanzamiento superpesado desarrollado por la NASA entre 1967 y
+                            1973. Es el cohete más grande y potente que ha volado con éxito, y fue el vehículo utilizado
+                            en las misiones Apolo que llevaron a los primeros humanos a la Luna.</p>
                     </div>
                 </div>
 
@@ -64,7 +76,9 @@
                     <img src="images/Ariane5.jpg" alt="Avatar">
                     <div class="container">
                         <h4><b>Ariane5</b></h4>
-                        <p>El Ariane 5 es un cohete de lanzamiento desarrollado por la Agencia Espacial Europea (ESA) y fabricado por Airbus Defence and Space. Se especializa en el lanzamiento de satélites de comunicación, telescopios espaciales y misiones científicas.</p>
+                        <p>El Ariane 5 es un cohete de lanzamiento desarrollado por la Agencia Espacial Europea (ESA) y
+                            fabricado por Airbus Defence and Space. Se especializa en el lanzamiento de satélites de
+                            comunicación, telescopios espaciales y misiones científicas.</p>
                     </div>
                 </div>
 
@@ -72,14 +86,19 @@
                     <img src="images/Soyuz_14.jpg" alt="Avatar">
                     <div class="container">
                         <h4><b>Soyuz14</b></h4>
-                        <p>El Soyuz es un cohete ruso que ha sido utilizado desde la década de 1960. Se ha convertido en uno de los sistemas de lanzamiento más confiables del mundo y ha servido para transportar tanto satélites como tripulaciones a la Estación Espacial Internacional (EEI).</p>
+                        <p>El Soyuz es un cohete ruso que ha sido utilizado desde la década de 1960. Se ha convertido en
+                            uno de los sistemas de lanzamiento más confiables del mundo y ha servido para transportar
+                            tanto satélites como tripulaciones a la Estación Espacial Internacional (EEI).</p>
                     </div>
                 </div>
                 <div class="cohete">
                     <img src="images/DELTAivHeavy.jpg" alt="Avatar">
                     <div class="container">
                         <h4><b>DELTAivHeavy</b></h4>
-                        <p>El Delta IV Heavy es un cohete de lanzamiento estadounidense desarrollado por United Launch Alliance (ULA). Es uno de los cohetes más potentes en servicio y se utiliza principalmente para lanzar cargas útiles pesadas a órbitas altas, incluyendo satélites militares y exploración espacial.</p>
+                        <p>El Delta IV Heavy es un cohete de lanzamiento estadounidense desarrollado por United Launch
+                            Alliance (ULA). Es uno de los cohetes más potentes en servicio y se utiliza principalmente
+                            para lanzar cargas útiles pesadas a órbitas altas, incluyendo satélites militares y
+                            exploración espacial.</p>
                     </div>
                 </div>
 
@@ -106,7 +125,7 @@
                     <td>Velocidad máxima:</td>
                     <td>27,000 km/h</td>
                 </tr>
-    
+
                 <tr>
                     <th colspan="2">Saturn V</th>
                 </tr>
@@ -122,7 +141,7 @@
                     <td>Velocidad máxima:</td>
                     <td>39,900 km/h</td>
                 </tr>
-    
+
                 <tr>
                     <th colspan="2">Ariane 5</th>
                 </tr>
@@ -138,7 +157,7 @@
                     <td>Velocidad máxima:</td>
                     <td>28,000 km/h</td>
                 </tr>
-    
+
                 <tr>
                     <th colspan="2">Soyuz</th>
                 </tr>
@@ -154,7 +173,7 @@
                     <td>Velocidad máxima:</td>
                     <td>28,000 km/h</td>
                 </tr>
-    
+
                 <tr>
                     <th colspan="2">Delta IV Heavy</th>
                 </tr>
@@ -173,10 +192,14 @@
             </tbody>
         </table>
     </section>
-    
-    
 
 
+
+    <footer>
+        <p>&copy; 2025 SpaceY. Todos los derechos reservados.</p>
+    </footer>
+    <script src="./scripts/nav.js" type="text/javascript"></script>
+    <script src="./scripts/desplegable.js" type="text/javascript" defer></script>
 </body>
 
 </html>
