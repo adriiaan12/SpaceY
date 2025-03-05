@@ -1,0 +1,50 @@
+/* Estilo para la imagen principal */
+.ImagenPrincipal {
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    height: 100vh; /* Ocupa todo el alto de la ventana */
+    object-fit: cover; /* Ajusta la imagen para que cubra el área sin distorsionar */
+    position: relative; /* Posición relativa para que esté dentro de la primera sección */
+    top: 0;
+    left: 0;
+    z-index: 0; /* La imagen está en el fondo */
+}
+
+/* Estilo para el contenido sobre la imagen */
+.feature {
+    position: relative; /* Necesario para que los elementos se posicionen encima de la imagen */
+    z-index: 1; /* Hace que el contenido se muestre encima de la imagen */
+    color: white; /* Color del texto */
+    text-align: center; /* Centra el texto */
+    padding: 20px;
+    margin-top: 30vh; /* Ajusta para que empiece a una altura adecuada */
+}
+
+/* Estilo para la segunda sección "Nuestros Cohetes" */
+section {
+    padding-top: 50px; /* Añade un margen superior para separar del contenido anterior */
+    padding-bottom: 50px;
+    background-color: #f1f1f1; /* Fondo gris claro para la segunda sección */
+    position: relative;
+    z-index: 2; /* Asegura que la segunda sección esté por encima de la imagen */
+}
+
+/* Títulos en la segunda sección */
+#Cohetes {
+    margin-top: 50px; /* Espacio superior adicional para la sección de "Nuestros Cohetes" */
+}
+
+
+/* Estilo adicional para el botón */
+.btn {
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente para el botón */
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Cambio de color cuando el ratón pasa por encima */
+}

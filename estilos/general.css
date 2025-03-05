@@ -1,0 +1,77 @@
+#menunavegador {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent; /* Fondo transparente por defecto */
+    padding: 15px 30px;
+    position: fixed;
+    display: flex;
+    justify-content: center; /* Centra el menú */
+    align-items: center;
+    z-index: 1000;
+}
+
+
+#menunavegador ul {
+    width: 100%;
+    display: flex;
+    justify-content: left; /* Centra los elementos */
+    align-items: right;
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+    margin-right: 45px;
+    gap: 15px; /* Espaciado entre elementos */
+}
+
+#menunavegador li {
+    display: inline-block;
+    
+}
+
+#menunavegador a {
+    
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    transition: color 0.3s ease-in-out;
+    font-family: 'Orbitron', sans-serif; /* Aplica la fuente */
+}
+
+#menunavegador a:hover {
+    color: #f39c12; /* Color dorado al pasar el mouse */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+/* Para evitar que el contenido quede tapado por el navbar */
+body {
+    padding-top: 100px;
+    
+}
+
+.logo {
+    
+    
+    padding-top: 15px;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    padding: 10px 20px; /* Reducido para hacerlo más delgado */
+    height: 50px; /* Ajusta la altura según lo que necesites */
+    line-height: 50px; /* Centra los elementos en la barra */
+    transition: background-color 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+
+.nav-scroll {
+    background-color: black; /* Fondo negro al hacer scroll */
+}
+
+
