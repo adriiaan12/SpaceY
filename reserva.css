@@ -1,0 +1,74 @@
+
+@font-face {
+    font-family: 'antonio';
+    src: url("./images/Antonio-SemiBold.ttf") format(Truetype);
+}
+
+body{
+    background: url('./images/cuete.png') no-repeat center center/cover; /* ✅ Imagen de fondo */
+    background-size: cover; /* ✅ La imagen se ajusta al ancho y mantiene la proporción */
+    background-attachment: fixed; /* ✅ Para que el fondo se quede fijo */
+    color: #E8ECF3;
+    font-family: antonio;
+
+}
+
+.pepe{  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+form{
+    color: #E8ECF3;
+    font-size: 2em;
+    background: rgba(73, 73, 73, 0.247);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 50%;
+    text-align: center;
+    
+}
+
+
+form input,
+form select { 
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 8px;
+    color: rgba(255, 255, 255, 0.7);
+    outline: none;
+    font-size: 16px;
+    font-family: antonio;
+}
+form button:hover {
+    background: #e64a19;
+}
+form input::placeholder{
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+
+form button{
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: antonio;
+    margin-top: 10px;
+}
+
+
+a{
+    text-decoration: none;
+    color: #D9DFEB;
+    /*border-bottom: 2px solid #843b22;*/
+}
