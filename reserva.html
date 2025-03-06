@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" href="./logospacey-icono.png">
     <link rel="stylesheet" href="./estilos/general.css" type="text/css">
     <link rel="stylesheet" href="./estilos/reserva.css" type="text/css">
-    
+
     <link rel="stylesheet" href="./estilos/index.css" type="text/css">
 
     <!-- Google Fonts -->
@@ -31,12 +31,13 @@
 <body>
 
     <header>
-    
-      
+
+
         <nav class="nav-links" id="menunavegador">
-          <a href="./index.html"><img class ="logo" src="./images/logospacey-remove.png"  alt="SpaceY" title="SpaceY Logo"></a>
-          <ul>
-                
+            <a href="./index.html"><img class="logo" src="./images/logospacey-remove.png" alt="SpaceY"
+                    title="SpaceY Logo"></a>
+            <ul>
+
                 <li><a href="#Cohetes">Cohetes</a></li>
                 <li><a href="./reserva.html">Reservas</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -45,36 +46,42 @@
 
         </nav>
 
-      <!-- Aside desplegable -->
+        <!-- Aside desplegable -->
     </header>
     <aside id="sidebar" class="sidebar">
-      
+
         <a href="#">MISSION</a>
         <a href="#">LAUNCHES</a>
         <a href="#">CAREERS</a>
         <a href="#">UPDATES</a>
         <a href="#">SHOP</a>
     </aside>
-    
+
 
     <div class="pepe">
         <form action="#" method="post">
 
-            Nombre  <input required type="text" name="nombre" placeholder="Nombre*">
-            Apellidos  <input required type="text" name="apellidos" placeholder="Apellidos*"><br>
-            Correo electrónico  <input required type="email" name="correo" placeholder="Correo Electrónico*">
-            Número de teléfono  <input type="text" name="telefono" placeholder="Teléfono"><br>
-            Fecha de salida  <input required type="date" name="fechaini" placeholder="Fecha">
-            Fecha de llegada  <input required type="date" name="fechafin" placeholder="Hora"><br>
-            Número de Personas  <input type="number" name="quantity" min="1" max="5" value="1">
-            Selector de cohetes  <select name="cohetes">
+            Nombre <input required type="text" name="nombre" placeholder="Nombre*">
+            Apellidos <input required type="text" name="apellidos" placeholder="Apellidos*"><br>
+            Correo electrónico <input required type="email" name="correo" placeholder="Correo Electrónico*">
+            Número de teléfono <input type="text" name="telefono" placeholder="Teléfono"><br>
+            Fecha de salida <input required type="date" name="fechaini" placeholder="Fecha">
+            Fecha de llegada <input required type="date" name="fechafin" placeholder="Hora"><br>
+            Número de Personas <input type="number" name="quantity" min="1" max="5" value="1">
+            Selector de cohetes <select name="cohetes">
                 <option value="" disabled selected>Selecciona una opción</option>
                 <option value="falcon">Falcon</option>
                 <option value="starship">Starship</option>
                 <option value="saturno">Saturno</option>
             </select><br>
+            <input type="radio" id="html" name="fav_language" value="HTML">
+            <label for="html">Básico</label><br>
+            <input type="radio" id="css" name="fav_language" value="CSS">
+            <label for="css">Premium</label><br>
+            <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+            <label for="javascript">Premium+</label>
             <button type="submit" value="Reservar">enviar</button>
-            
+
         </form>
     </div>
 
