@@ -8,18 +8,18 @@
 .ImagenPrincipal {
     width: 100%; /* Asegura que ocupe todo el ancho de la ventana */
     height: 100vh; /* Asegura que ocupe todo el alto de la ventana */
-    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    
     position: relative; /* Se posiciona de manera absoluta */
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     z-index: -1; /* La pone en el fondo */
+    display: flex;
 }
 
-
-
 .feature {
+    
     position: absolute;
     z-index: 1;
     color: white;
@@ -28,23 +28,21 @@
     top:80%;
     left: 10%;
     transform: translate(-50%, -50%);
-    /* Empieza después de la imagen */
+    
 }
 
 
 /* Estilo para la segunda sección "Nuestros Cohetes" */
 section {
-   /* Añade un margen superior para separar del contenido anterior */
-    padding-bottom: 50px;
+   
     background-color: #f1f1f1; /* Fondo gris claro para la segunda sección */
     position: relative;
     z-index: 2; /* Asegura que la segunda sección esté por encima de la imagen*/ 
+    margin: 0;
+    padding: 0;
 }
 
-/* Títulos en la segunda sección */
-#Cohetes {
-    margin-top: 50px; /* Espacio superior adicional para la sección de "Nuestros Cohetes" */
-}
+
 
 
 /* Estilo adicional para el botón */
