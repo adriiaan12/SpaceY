@@ -1,72 +1,12 @@
+
+
+body
+{
+  background: url('../images/fotofondito.jpg') no-repeat center center/cover;
+
+}
+
 /* Contenedor del carrusel */
-.cohetes-container {
-  overflow: hidden;
-  position: relative;
-  border: 2px solid black;
-  width: 80%;
-  margin: auto;
-  background: #1B4F72;
-  border-radius: 15px;
-  padding: 20px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-/* Contenedor de cohetes */
-.cohetes {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  transition: transform 0.5s;
-  gap: 20px; /* Espaciado entre los cohetes */
-}
-
-/* Tarjetas de los cohetes */
-.cohete {
-  flex-basis: 30%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255, 255, 255, 0.1); /* Fondo translúcido */
-  border-radius: 12px;
-  padding: 15px;
-}
-
-.cohete:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-}
-
-/* Imágenes de los cohetes */
-.cohete > img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border: 5px solid rgb(75, 157, 157);
-  display: block;
-  border-radius: 10px;
-}
-
-/* Contenedor de texto dentro de las tarjetas */
-.container {
-  padding: 15px;
-  text-align: center;
-}
-
-.container h4 {
-  margin: 10px 0;
-  font-size: 20px;
-  font-weight: 600;
-  color: rgb(75, 157, 157);
-}
-
-.container p {
-  font-size: 14px;
-  line-height: 1.6;
-}
 
 /* Botones del carrusel */
 .btn {
@@ -96,7 +36,7 @@
   width: 80%;
   margin: 40px auto;
   padding: 20px;
-  background: linear-gradient(135deg, #1e3c72, #2a5298); /* Fondo degradado azul */
+  background: linear-gradient(135deg, #1b253873, #0d59dcba); /* Fondo degradado azul */
   border-radius: 15px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
   text-align: center;
@@ -142,4 +82,5 @@
   background: rgba(255, 255, 255, 0.2);
   transition: 0.3s;
 }
+
 
