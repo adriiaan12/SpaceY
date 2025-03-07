@@ -38,9 +38,9 @@
                     title="SpaceY Logo"></a>
             <ul>
 
-                <li><a href="#Cohetes">Cohetes</a></li>
+                <li><a href="./salas.html">Cohetes</a></li>
                 <li><a href="./reserva.html">Reservas</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="./X.html">Contact</a></li>
             </ul>
             <button class="menu-btn" onclick="toggleMenu()">&#9776;</button>
 
@@ -58,37 +58,85 @@
     </aside>
 
 
-    <div class="pepe">
+    <div class="contenedorppal">
         <form action="#" method="post">
-
-            Nombre <input required type="text" name="nombre" placeholder="Nombre*">
-            Apellidos <input required type="text" name="apellidos" placeholder="Apellidos*"><br>
-            Correo electrónico <input required type="email" name="correo" placeholder="Correo Electrónico*">
-            Número de teléfono <input type="text" name="telefono" placeholder="Teléfono"><br>
-            Fecha de salida <input required type="date" name="fechaini" placeholder="Fecha">
-            Fecha de llegada <input required type="date" name="fechafin" placeholder="Hora"><br>
-            Número de Personas <input type="number" name="quantity" min="1" max="5" value="1">
-            Selector de cohetes <select name="cohetes">
-                <option value="" disabled selected>Selecciona una opción</option>
-                <option value="falcon">Falcon</option>
-                <option value="starship">Starship</option>
-                <option value="saturno">Saturno</option>
-            </select><br>
-            <input type="radio" id="html" name="fav_language" value="HTML">
-            <label for="html">Básico</label><br>
-            <input type="radio" id="css" name="fav_language" value="CSS">
-            <label for="css">Premium</label><br>
-            <input type="radio" id="javascript" name="fav_language" value="JavaScript">
-            <label for="javascript">Premium+</label>
-            <button type="submit" value="Reservar">enviar</button>
-
+            <!-- Paso 1 - Datos personales -->
+            <div class="form-step" id="step1">
+                Nombre <input required type="text" name="nombre" placeholder="Nombre*">
+                Apellidos <input required type="text" name="apellidos" placeholder="Apellidos*"><br>
+                Correo electrónico <input required type="email" name="correo" placeholder="Correo Electrónico*">
+                Número de teléfono <input type="text" name="telefono" placeholder="Teléfono"><br>
+                Fecha de salida <input required type="date" name="fechaini" placeholder="Fecha">
+                Fecha de llegada <input required type="date" name="fechafin" placeholder="Hora"><br>
+                Número de Personas <input type="number" name="quantity" min="1" max="5" value="1">
+                Selector de cohetes <select name="cohetes">
+                    <option value="" disabled selected>Selecciona una opción</option>
+                    <option value="falcon">Falcon</option>
+                    <option value="starship">Starship</option>
+                    <option value="saturno">Saturno</option>
+                </select><br>
+                <button type="button" onclick="mostrarPlanes()">Siguiente</button>
+            </div>
+    
+            <!-- Paso 2 - Selección de planes -->
+            <div class="form-step hidden" id="step2">
+                <h2>Elige tu Plan de Vuelo</h2>
+                
+                <!-- Selector de planes visible -->
+                <select id="plan" name="plan" required onchange="seleccionarPlanDesdeSelect()">
+                    <option value="">Selecciona un plan</option>
+                    <option value="Básico">Básico</option>
+                    <option value="Premium">Premium</option>
+                    <option value="Business">Business</option>
+                </select>
+    
+                <div class="plans">
+                    <!-- Opción Básico -->
+                    <div class="plan" id="planBasico">
+                        <div class="plan-title">Básico</div>
+                        <div class="plan-price" id="precioBasico">$0</div>
+                        <ul class="plan-features">
+                            <li>✔ 1 maleta de mano</li>
+                            <li>✔ Asiento estándar</li>
+                            <li>✖ Sin comida incluida</li>
+                        </ul>
+                        <button type="button" class="plan-button" onclick="seleccionarPlan('Básico')">Seleccionar</button>
+                    </div>
+                    <!-- Opción Premium -->
+                    <div class="plan" id="planPremium">
+                        <div class="plan-title">Premium</div>
+                        <div class="plan-price" id="precioPremium">$0</div>
+                        <ul class="plan-features">
+                            <li>✔ 2 maletas</li>
+                            <li>✔ Asiento con más espacio</li>
+                            <li>✔ Comida incluida</li>
+                        </ul>
+                        <button type="button" class="plan-button" onclick="seleccionarPlan('Premium')">Seleccionar</button>
+                    </div>
+                    <!-- Opción Business -->
+                    <div class="plan" id="planBusiness">
+                        <div class="plan-title">Business</div>
+                        <div class="plan-price" id="precioBusiness">$0</div>
+                        <ul class="plan-features">
+                            <li>✔ 3 maletas</li>
+                            <li>✔ Asiento reclinable</li>
+                            <li>✔ Servicio VIP</li>
+                        </ul>
+                        <button type="button" class="plan-button" onclick="seleccionarPlan('Business')">Seleccionar</button>
+                    </div>
+                </div>
+    
+                <button type="submit" id="confirmarBtn">Confirmar</button>
+            </div>
         </form>
     </div>
 
 
 
+
     <script src="./scripts/nav.js" type="text/javascript"></script>
     <script src="./scripts/desplegable.js" type="text/javascript" defer></script>
+    <script src="./scripts/reserva.js"></script>
 
 
 </body>
