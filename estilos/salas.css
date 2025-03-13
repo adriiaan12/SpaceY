@@ -66,41 +66,81 @@ body
   color: white;
   font-size: 16px;
 }
+/* Estilos para el carrusel de tarjetas */
 
-/* Alternar colores en filas */
-.table-cohetes tr:nth-child(even) {
-  background: rgba(255, 255, 255, 0.05);
+
+
+
+.multiple-card-slider {
+  max-width: 1500px;
+  margin: 10em auto;
+  padding: 0 1em;
 }
 
-/* Última fila sin borde */
-.table-cohetes tr:last-child td {
-  border-bottom: none;
-}
 
-/* Resaltar al pasar el cursor */
-.table-cohetes tr:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transition: 0.3s;
-}
 
 
 .multiple-card-slider .carousel-inner {
   padding: 1em;
+  background: linear-gradient(135deg, #1b253873, #0d59dcba); /* Fondo degradado azul */
+  border-radius: 15px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 50%; /* Puedes ajustar la altura a tu gusto */
+  object-fit: cover;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
+
+/* Estilos para las tarjetas */
+
 .multiple-card-slider .card {
   margin: 0 0.5em;
   box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
   border: none;
+  background: rgba(255, 255, 255, 0.1); /* Fondo translúcido */
+  border-radius: 10px;
+  overflow: hidden;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
+
+/* Contenedor fijo para la imagen */
+.multiple-card-slider .card .card-img-top {
+  width: 100%;
+  height: 200px; /* Ajusta esta altura según prefieras */
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* Contenido del cuerpo de la tarjeta */
+.multiple-card-slider .card .card-body {
+  flex: 1;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+/* Estilos para los botones de control del carrusel */
 .multiple-card-slider .carousel-control-prev,
 .multiple-card-slider .carousel-control-next {
-  background-color: #e1e1e1;
+  background-color: rgba(255, 255, 255, 0.3);
   width: 3em;
   height: 3em;
   border-radius: 50%;
   top: 50%;
   transform: translateY(-50%);
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
 }
+
+/* Flechas de navegación */
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Diseño responsivo */
 @media (min-width: 768px) {
   .multiple-card-slider .carousel-item {
     margin-right: 0;
