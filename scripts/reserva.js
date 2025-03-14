@@ -95,3 +95,5 @@ document.querySelector('form').addEventListener('submit', function(e) {
         alert('Por favor, selecciona un plan de vuelo.');
     }
 });
+
+

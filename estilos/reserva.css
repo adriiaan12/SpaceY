@@ -91,6 +91,7 @@ a{
     margin-bottom: 20px;    
     display: flex;
     justify-content: center;
+    
     gap: 20px;
     flex-wrap: wrap;
 }
@@ -102,8 +103,9 @@ a{
     text-align: center;
     padding: 20px;
     flex: 1;
-    min-width: 280px;
+    /*min-width: 280px;*/
     transition: transform 0.3s ease;
+
 }
 
 .plan:hover {
@@ -210,6 +212,44 @@ a{
 @media (min-width: 768px) {
     .plans {
         flex-direction: row;
+    }
+}
+
+/* Estilos responsive para móviles */
+@media (max-width: 767px) {
+    .contenedorppal {
+        margin-top: 25%; /* Ajusta el margen superior en móviles */
+    }
+    
+    form {
+        width: 90%; /* Formulario más ancho en móviles */
+        padding: 15px;
+        font-size: 1.5em; /* Texto más pequeño */
+    }
+    
+    form input,
+    form select {
+        width: 100%; /* Inputs a ancho completo */
+        margin-bottom: 10px;
+    }
+    
+    .plans {
+        flex-direction: column; /* Tarjetas en columna para móviles */
+    }
+    
+    .plan {
+        margin-bottom: 15px;
+    }
+    
+    /* Ajustes para el formulario paso a paso */
+    #step1 {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #step1 input,
+    #step1 select {
+        margin-bottom: 15px;
     }
 }
 

@@ -58,18 +58,19 @@
     </aside>
 
 
+
     <div class="contenedorppal">
         <form action="#" method="post">
             <!-- Paso 1 - Datos personales -->
             <div class="form-step" id="step1">
-                Nombre <input required type="text" name="nombre" placeholder="Nombre*">
+                <label for="nombres">Nombre</label> <input required type="text" name="nombre" id="nombres" placeholder="Nombre*">
                 Apellidos <input required type="text" name="apellidos" placeholder="Apellidos*"><br>
                 Correo electrónico <input required type="email" name="correo" placeholder="Correo Electrónico*">
                 Número de teléfono <input type="text" name="telefono" placeholder="Teléfono"><br>
                 Fecha de salida <input required type="date" name="fechaini" placeholder="Fecha">
                 Fecha de llegada <input required type="date" name="fechafin" placeholder="Hora"><br>
                 Número de Personas <input type="number" name="quantity" min="1" max="5" value="1">
-                Selector de cohetes <select name="cohetes">
+                Selector de cohetes <select required name="cohetes">
                     <option value="" disabled selected>Selecciona una opción</option>
                     <option value="falcon">Falcon</option>
                     <option value="starship">Starship</option>
