@@ -1,8 +1,10 @@
 // Precios base por cohete
 const preciosBase = {
     falcon: 100,
-    starship: 150,
-    saturno: 200
+    ariane: 150,
+    saturno: 200,
+    soyuz: 125,
+    delta: 180
 };
 
 function mostrarPlanes() {
@@ -97,3 +99,34 @@ document.querySelector('form').addEventListener('submit', function(e) {
 });
 
 
+// Función para obtener parámetros de la URL
+function getParameterByName(name, url = window.location.href) {
+    name = name.replace(/[\[\]]/g, '\\$&');
+    const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
+// Función para preseleccionar el cohete al cargar la página
+function preseleccionarCohete() {
+    const coheteSeleccionado = getParameterByName('cohete');
+    if (coheteSeleccionado) {
+        const selectorCohetes = document.querySelector('select[name="cohetes"]');
+        // Verificar si el valor existe en las opciones
+        const opcionExiste = Array.from(selectorCohetes.options).some(option => option.value === coheteSeleccionado);
+        
+        if (opcionExiste) {
+            selectorCohetes.value = coheteSeleccionado;
+            
+            // Opcional: si tienes alguna función que debe ejecutarse al cambiar el cohete
+            // Puedes dispararla aquí
+            // Por ejemplo, si tienes una función que actualiza precios basados en el cohete
+            // actualizarPrecios();
+        }
+    }
+}
+
+// Ejecutar la función cuando la página se carga
+document.addEventListener('DOMContentLoaded', preseleccionarCohete);
