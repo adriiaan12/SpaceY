@@ -9,7 +9,7 @@
     padding: 40px 0px;
     position: fixed;
     display: flex;
-    justify-content: center; /* Centra el menú */
+    justify-content: space-between; /* Centra el menú */
     align-items: center;
     transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 
@@ -239,3 +239,50 @@ nav {
     color: rgb(173, 203, 203);
   }
   
+
+  /* Media queries para dispositivos móviles */
+@media (max-width: 767px) {
+    .nav-links {
+        padding: 10px;
+    }
+
+    .nav-items {
+        display: none;
+    }
+    
+    .nav-links ul {
+        display: none; /* Ocultar los elementos de navegación en móvil */
+    }
+    
+    .menu-btn {
+        display: block; /* Mostrar el botón de menú en móvil */
+    }
+    
+    
+    
+    .nav-links .logo-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    /* Ajustes adicionales para el sidebar en móvil */
+    .sidebar {
+        width: 100%;
+        right: -100%;
+    }
+    
+    .sidebar.open {
+        right: 0;
+    }
+    
+    /* Ajustes para el contenido principal cuando el sidebar está abierto */
+    .contenedorppal {
+        transition: all 0.3s ease;
+    }
+    
+    body.menu-open .contenedorppal {
+        opacity: 0.3;
+        pointer-events: none;
+    }
+}
