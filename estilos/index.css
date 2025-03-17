@@ -187,3 +187,45 @@ footer {
     text-align: center;
     padding: 20px 0;
 }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .nav-items {
+        display: none;
+    }
+    .menu-container {
+        display: block;
+    }
+    .feature {
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .contenedor-principal {
+        padding: 30px;
+    }
+    .Cohetes {
+        font-size: 2rem;
+    }
+    .article-footer-container {
+        padding: 30px;
+    }
+    .image-container {
+        width: 250px;
+        height: 250px;
+    }
+    article {
+        flex-direction: column;
+        
+    }
+    article ul{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    article li{
+        margin: 10px;
+    }
+    
+}
