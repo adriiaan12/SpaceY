@@ -123,7 +123,7 @@ article ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 360px; /* Espacio entre imágenes */
+    gap: 20%; /* Espacio entre imágenes */
     padding: 0;
 }
 
