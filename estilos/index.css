@@ -4,7 +4,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+@font-face {
+    font-family: 'antonio';
+    src: url("../images/Antonio-SemiBold.ttf") format(Truetype);
+}
 
+body{font-family: antonio;}
 /* Estilo adicional para el botón */
 .btn {
     display: inline-block;
@@ -52,7 +57,7 @@
 
 /* Estilo para la segunda sección "Nuestros Cohetes" */
 section {
-   
+    
     background-color: #f1f1f1; /* Fondo gris claro para la segunda sección */
     position: relative;
     z-index: 2; /* Asegura que la segunda sección esté por encima de la imagen*/ 
@@ -61,7 +66,7 @@ section {
 }
 
 
-#Cohetes {
+.Cohetes {
     position: absolute; /* Posiciona el texto sobre la imagen */
     top: 3%; /* Ajusta la posición verticalmente */
     left: 50%; /* Lo lleva al centro horizontal */
@@ -71,6 +76,10 @@ section {
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Sombra para mejorar la visibilidad */
 }
+
+#Noticia{top:6%;}
+
+
 
 
 
@@ -159,6 +168,10 @@ article li {
     align-items: center;
     color: white;
     font-size: 24px;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 5%;
 }
 
 /* Efecto de giro */
