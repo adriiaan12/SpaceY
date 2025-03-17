@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable = no">
+    <title dir="ltr">Sistema Solar - 3D</title>
+    <link rel="stylesheet" href="css/styles.css">
+        <!-- Hoja de estilo -->
+        <link  href="../estilos/general.css" rel="stylesheet">
+        <link  href="../estilos/index.css" rel="stylesheet">
+    
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+
+  </head>
+  <body class="opening hide-UI view-2D zoom-large data-close controls-close">
+<header>
+    
+      
+        <nav class="nav-links" id="menunavegador">
+          <a href="../index.html"><img class ="logo" src="../images/logospacey-remove.png"  alt="SpaceY" title="SpaceY Logo"></a>
+          <ul>
+                
+                <li><a href="../salas.html">Cohetes</a></li>
+                <li><a href="../reserva.html">Reservas</a></li>
+                <li><a href="../X.html">Detalles</a></li>
+            </ul>
+            <button class="menu-btn" onclick="toggleMenu()">&#9776;</button>
+
+        </nav>
+
+      
+    </header>
+    <aside id="sidebar" class="sidebar">
+      
+      <a href="./sistema.html">VIAJES</a>
+      <a href="#">LAUNCHES</a>
+      <a href="#">CAREERS</a>
+      <a href="#">UPDATES</a>
+      <a href="#">SHOP</a>
+  </aside>
+    <div id="navbar">
+      <a id="toggle-data" href="#data"><i class="icon-data"></i>Sistema</a>
+      <!--
+      <h1>Sistema Solar 3D</h1>-->
+     <!-- <a id="toggle-controls" href="#controls"><i class="icon-controls"></i>Controles</a> -->
+    </div>
+
+    <div id="data">
+      
+      <!--<a class="mercury" title="mercury" href="#mercuryspeed">Mercurio</a>
+      <a class="venus" title="venus" href="#venusspeed">Venus</a>
+      <a class="earth active" title="earth" href="#earthspeed">Tierra</a>-->
+      <a class="mars" title="mars" href="#marsspeed">Marte</a>
+      <a class="jupiter" title="jupiter" href="#jupiterspeed">Jupiter</a>
+      <a class="saturn" title="saturn" href="#saturnspeed">Saturno</a>
+
+    </div>
+<!--
+    <div id="controls">
+      <label class="set-view">
+        <input type="checkbox">
+      </label>
+
+      <label class="set-zoom">
+        <input type="checkbox">
+      </label>
+
+      <label>
+        <input type="radio" class="set-speed" name="scale" checked>
+        <span>Velocidad</span>
+      </label>
+
+      <label>
+        <input type="radio" class="set-size" name="scale">
+        <span>Tamaño</span>
+      </label>
+
+      <label>
+        <input type="radio" class="set-distance" name="scale" >
+        <span>Distancia</span>
+      </label>-->
+
+    </div>
+    <div id="universe" class="scale-stretched">
+      <div id="galaxy">
+        <div id="solar-system" class="earth">
+          <div id="mercury" class="orbit">
+            <div class="pos">
+              <div class="planet">
+                <dl class="infos">
+                  <dt>Mercurio</dt>
+                  <dd><span></span></dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+
+          <div id="venus" class="orbit">
+            <div class="pos">
+              <div class="planet">
+                <dl class="infos">
+                  <dt>Venus</dt>
+                  <dd><span></span></dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+
+          <div id="earth" class="orbit">
+            <div class="pos">
+              <div class="orbit">
+                <div class="pos">
+                  <div class="moon"></div>
+                </div>
+              </div>
+              <div class="planet">
+                <dl class="infos">
+                  <dt>Tierra</dt>
+                  <!--<dd><span></span></dd>-->
+                </dl>
+              </div>
+            </div>
+          </div>
+
+          <div id="mars" class="orbit">
+            <div class="pos">
+              <div class="planet">
+                <dl class="infos">
+                  <dt>Marte</dt>
+                  <dd><span></span></dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+
+          <div id="jupiter" class="orbit">
+            <div class="pos">
+              <div class="planet">
+                <dl class="infos">
+                  <dt>Júpiter</dt>
+                  <dd><span></span></dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+
+          <div id="saturn" class="orbit">
+            <div class="pos">
+              <div class="planet">
+                <div class="ring"></div>
+                <dl class="infos">
+                  <dt>Saturno</dt>
+                  <dd><span></span></dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+
+          <div id="uranus" class="orbit">
+            <div class="pos">
+              <div class="planet">
+                <dl class="infos">
+                  <dt>Urano</dt>
+                  <dd><span></span></dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+
+          <div id="neptune" class="orbit">
+            <div class="pos">
+              <div class="planet">
+                <dl class="infos">
+                  <dt>Neptuno</dt>
+                  <dd><span></span></dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+
+          <div id="sun">
+            <dl class="infos">
+              <dt>Sol</dt>
+              <dd><span></span></dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+    if (typeof jQuery == 'undefined') { 
+      document.write(unescape("%3Cscript src='js/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));
+    }
+    </script>
+
+    <script src="js/prefixfree.min.js"></script>
+    <script src="js/scripts.min.js"></script>
+    <script src="../scripts/nav.js" type="text/javascript"></script>
+    <script src="../scripts/desplegable.js" type="text/javascript" defer></script>
+  </body>
+</html>
