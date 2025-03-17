@@ -24,32 +24,37 @@
 
 
     <!-- Bootstrap JS (desde assets) -->
-    <script src="assets/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js" defer></script>
+    <!--<script src="assets/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js" defer></script>-->
 
 </head>
 
 <body>
 
     <header>
-
-
         <nav class="nav-links" id="menunavegador">
-            <a href="./index.html"><img class="logo" src="./images/logospacey-remove.png" alt="SpaceY"
-                    title="SpaceY Logo"></a>
-            <ul>
-
-                <li><a href="./salas.html">Cohetes</a></li>
-                <li><a href="./reserva.html">Reservas</a></li>
-                <li><a href="./X.html">Detalles</a></li>
-            </ul>
-            <button class="menu-btn" onclick="toggleMenu()">&#9776;</button>
-
+            <div class="logo-container">
+                <a href="./index.html"><img class="logo" src="./images/logospacey-remove.png" alt="SpaceY" title="SpaceY Logo"></a>
+            </div>
+            <div class="nav-items">
+                <ul>
+                    <li><a href="./salas.html" class="main-nav-link">Cohetes</a></li>
+                    <li><a href="./reserva.html" class="main-nav-link">Reservas</a></li>
+                    <li><a href="./X.html" class="main-nav-link">Detalles</a></li>
+                </ul>
+            </div>
+            
+            
+            
+            <div class="menu-container">
+                <button class="menu-btn" onclick="toggleMenu()">&#9776;</button>
+            </div>
         </nav>
-
-        <!-- Aside desplegable -->
     </header>
+    
+    <!-- Aside desplegable -->
     <aside id="sidebar" class="sidebar">
-
+        <!-- Los enlaces principales se insertarán aquí dinámicamente en móvil -->
+        <div class="sidebar-divider"></div>
         <a href="#">MISSION</a>
         <a href="#">LAUNCHES</a>
         <a href="#">CAREERS</a>
@@ -59,80 +64,129 @@
 
 
 
-    <div class="contenedorppal">
-        <form action="#" method="post">
-            <!-- Paso 1 - Datos personales -->
-            <div class="form-step" id="step1">
-                <label for="nombres">Nombre</label> <input required type="text" name="nombre" id="nombres" placeholder="Nombre*">
-                Apellidos <input required type="text" name="apellidos" placeholder="Apellidos*"><br>
-                Correo electrónico <input required type="email" name="correo" placeholder="Correo Electrónico*">
-                Número de teléfono <input type="text" name="telefono" placeholder="Teléfono"><br>
-                Fecha de salida <input required type="date" name="fechaini" placeholder="Fecha">
-                Fecha de llegada <input required type="date" name="fechafin" placeholder="Hora"><br>
-                Número de Personas <input type="number" name="quantity" min="1" max="5" value="1">
-                Selector de cohetes <select required name="cohetes">
-                    <option value="" disabled selected>Selecciona una opción</option>
-                    <option value="falcon">Falcon 9</option>
-                    <option value="saturno">Saturn V</option>
-                    <option value="ariane">Ariane 5</option>
-                    <option value="soyuz">Soyuz 14</option>
-                    <option value="delta">Delta IV Heavy</option>
-                </select><br>
-                <button type="button" onclick="mostrarPlanes()">Siguiente</button>
-            </div>
-    
-            <!-- Paso 2 - Selección de planes -->
-            <div class="form-step hidden" id="step2">
-                <h2>Elige tu Plan de Vuelo</h2>
+    <!-- Modifica tu HTML actual a esta estructura -->
+<div class="contenedorppal">
+    <form action="#" method="post">
+        <!-- Paso 1 - Datos personales -->
+        <div class="form-step" id="step1">
+            <h2 class="form-title">Reserva tu vuelo espacial</h2>
+            
+            <div class="form-grid">
+                <!-- Primera fila -->
+                <div class="form-group">
+                    <label for="nombres">Nombre</label>
+                    <input class="form-control" required type="text" name="nombre" id="nombres" placeholder="Nombre*">
+                </div>
                 
-                <!-- Selector de planes visible -->
-                <select id="plan" name="plan" required onchange="seleccionarPlanDesdeSelect()">
+                <div class="form-group">
+                    <label for="apellidos">Apellidos</label>
+                    <input class="form-control" required type="text" name="apellidos" id="apellidos" placeholder="Apellidos*">
+                </div>
+                
+                <!-- Segunda fila -->
+                <div class="form-group">
+                    <label for="correo">Correo electrónico</label>
+                    <input class="form-control" required type="email" name="correo" id="correo" placeholder="Correo Electrónico*">
+                </div>
+                
+                <div class="form-group">
+                    <label for="telefono">Número de teléfono</label>
+                    <input class="form-control" type="text" name="telefono" id="telefono" placeholder="Teléfono">
+                </div>
+                
+                <!-- Tercera fila -->
+                <div class="form-group">
+                    <label for="fechaini">Fecha de salida</label>
+                    <input class="form-control" required type="date" name="fechaini" id="fechaini">
+                </div>
+                
+                <div class="form-group">
+                    <label for="fechafin">Fecha de llegada</label>
+                    <input class="form-control" required type="date" name="fechafin" id="fechafin">
+                </div>
+                
+                <!-- Cuarta fila -->
+                <div class="form-group">
+                    <label for="quantity">Número de Personas</label>
+                    <input class="form-control" type="number" name="quantity" id="quantity" min="1" max="5" value="1">
+                </div>
+                
+                <div class="form-group">
+                    <label for="cohetes">Selector de cohetes</label>
+                    <select class="form-control" required name="cohetes" id="cohetes">
+                        <option value="" disabled selected>Selecciona una opción</option>
+                        <option value="falcon">Falcon 9</option>
+                        <option value="saturno">Saturn V</option>
+                        <option value="ariane">Ariane 5</option>
+                        <option value="soyuz">Soyuz 14</option>
+                        <option value="delta">Delta IV Heavy</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="form-navigation">
+                <button type="button" class="btn btn-primary" onclick="mostrarPlanes()">Siguiente</button>
+            </div>
+        </div>
+    
+        <!-- Paso 2 - Selección de planes -->
+        <div class="form-step hidden" id="step2">
+            <h2 class="form-title">Elige tu Plan de Vuelo</h2>
+            
+            <!-- Selector de planes visible -->
+            <div class="form-group text-center">
+                <select class="form-control" id="plan" name="plan" required onchange="seleccionarPlanDesdeSelect()">
                     <option value="">Selecciona un plan</option>
                     <option value="Básico">Básico</option>
                     <option value="Premium">Premium</option>
                     <option value="Business">Business</option>
                 </select>
-    
-                <div class="plans">
-                    <!-- Opción Básico -->
-                    <div class="plan" id="planBasico">
-                        <div class="plan-title">Básico</div>
-                        <div class="plan-price" id="precioBasico">$0</div>
-                        <ul class="plan-features">
-                            <li>✔ 1 maleta de mano</li>
-                            <li>✔ Asiento estándar</li>
-                            <li>✖ Sin comida incluida</li>
-                        </ul>
-                        <button type="button" class="plan-button" onclick="seleccionarPlan('Básico')">Seleccionar</button>
-                    </div>
-                    <!-- Opción Premium -->
-                    <div class="plan" id="planPremium">
-                        <div class="plan-title">Premium</div>
-                        <div class="plan-price" id="precioPremium">$0</div>
-                        <ul class="plan-features">
-                            <li>✔ 2 maletas</li>
-                            <li>✔ Asiento con más espacio</li>
-                            <li>✔ Comida incluida</li>
-                        </ul>
-                        <button type="button" class="plan-button" onclick="seleccionarPlan('Premium')">Seleccionar</button>
-                    </div>
-                    <!-- Opción Business -->
-                    <div class="plan" id="planBusiness">
-                        <div class="plan-title">Business</div>
-                        <div class="plan-price" id="precioBusiness">$0</div>
-                        <ul class="plan-features">
-                            <li>✔ 3 maletas</li>
-                            <li>✔ Asiento reclinable</li>
-                            <li>✔ Servicio VIP</li>
-                        </ul>
-                        <button type="button" class="plan-button" onclick="seleccionarPlan('Business')">Seleccionar</button>
-                    </div>
-                </div>
-    
-                <button type="submit" id="confirmarBtn">Confirmar</button>
             </div>
-        </form>
-    </div>
+    
+            <div class="plans">
+                <!-- Opción Básico -->
+                <div class="plan" id="planBasico">
+                    <div class="plan-title">Básico</div>
+                    <div class="plan-price" id="precioBasico">$0</div>
+                    <ul class="plan-features">
+                        <li>1 maleta de mano</li>
+                        <li>Asiento estándar</li>
+                        <li>Sin comida incluida</li>
+                    </ul>
+                    <button type="button" class="plan-button" onclick="seleccionarPlan('Básico')">Seleccionar</button>
+                </div>
+                
+                <!-- Opción Premium -->
+                <div class="plan" id="planPremium">
+                    <div class="plan-title">Premium</div>
+                    <div class="plan-price" id="precioPremium">$0</div>
+                    <ul class="plan-features">
+                        <li>2 maletas</li>
+                        <li>Asiento con más espacio</li>
+                        <li>Comida incluida</li>
+                    </ul>
+                    <button type="button" class="plan-button" onclick="seleccionarPlan('Premium')">Seleccionar</button>
+                </div>
+                
+                <!-- Opción Business -->
+                <div class="plan" id="planBusiness">
+                    <div class="plan-title">Business</div>
+                    <div class="plan-price" id="precioBusiness">$0</div>
+                    <ul class="plan-features">
+                        <li>3 maletas</li>
+                        <li>Asiento reclinable</li>
+                        <li>Servicio VIP</li>
+                    </ul>
+                    <button type="button" class="plan-button" onclick="seleccionarPlan('Business')">Seleccionar</button>
+                </div>
+            </div>
+    
+            <div class="form-navigation mt-4">
+                <button type="submit" id="confirmarBtn" class="btn btn-primary">Confirmar Reserva</button>
+            </div>
+        </div>
+    </form>
+</div>
 
 
 

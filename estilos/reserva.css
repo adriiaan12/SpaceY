@@ -1,205 +1,263 @@
-
+/* Mantener las fuentes y el fondo como estaban */
 @font-face {
     font-family: 'antonio';
     src: url("../images/Antonio-SemiBold.ttf") format(Truetype);
 }
 
-body{
-    background: url('../images/fotofondito.jpg') no-repeat center center/cover; /* ✅ Imagen de fondo */
-    background-size:cover; /* ✅ La imagen se ajusta al ancho y mantiene la proporción */
-    
-    background-attachment: fixed; /* ✅ Para que el fondo se quede fijo */
+body {
+    background: url('../images/fotofondito.jpg') no-repeat center center/cover;
+    background-size: cover;
+    background-attachment: fixed;
     color: #E8ECF3;
     font-family: antonio;
-
 }
 
-.contenedorppal{  
-    margin-top:15%;
+/* Contenedor principal rediseñado */
+.contenedorppal {
+    margin-top: 80px;
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    min-height: calc(100vh - 80px);
 }
 
-form{
+/* Formulario rediseñado */
+form {
     color: #E8ECF3;
-    font-size: 2em;
-    background: rgba(73, 73, 73, 0.247);
+    background: rgba(20, 20, 20, 0.75);
     backdrop-filter: blur(10px);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    width: 50%;
-    text-align: center;
-    
-}
-
-
-form input,
-form select { 
-    padding: 12px;
-    background: #005288;
-    border: none;
-    border-radius: 8px;
-    color: rgba(255, 255, 255, 0.7);
-    outline: none;
-    font-size: 16px;
-    font-family: antonio;
-}
-form button:hover {
-    background: #e64a19;
-}
-form input::placeholder{
-    color: rgba(255, 255, 255, 0.7);
-}
-
-
-
-form button{
-    background: rgba(255, 255, 255, 0.2);
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-    font-family: antonio;
-    margin-top: 10px;
-}
-
-
-a{
-    text-decoration: none;
-    color: #D9DFEB;
-    /*border-bottom: 2px solid #843b22;*/
-}
-
-.container {
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     width: 90%;
-    max-width: 1000px;
+    max-width: 800px;
+    padding: 30px;
+}
+
+/* Estructura de grid para el formulario */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+/* Título del formulario */
+.form-title {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
     text-align: center;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-#planesContainer {
-    display: none;
-
+/* Grupo de campos del formulario */
+.form-group {
+    position: relative;
+    margin-bottom: 15px;
 }
 
+/* Etiquetas */
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #add8e6;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Estilos para inputs y selects */
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    background: rgba(0, 82, 136, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    font-family: antonio;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    background: rgba(0, 82, 136, 0.9);
+    border-color: #1d6ce2;
+    box-shadow: 0 0 0 3px rgba(29, 108, 226, 0.25);
+}
+
+/* Placeholder */
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Botones */
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: antonio;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #1d6ce2, #0050a5);
+    color: white;
+    box-shadow: 0 4px 15px rgba(29, 108, 226, 0.3);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #0050a5, #003d80);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(29, 108, 226, 0.4);
+}
+
+/* Planes de vuelo */
 .plans {
-    margin-top:20px;
-    margin-bottom: 20px;    
-    display: flex;
-    justify-content: center;
-    
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 20px;
-    flex-wrap: wrap;
 }
 
 .plan {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    flex: 1;
-    /*min-width: 280px;*/
-    transition: transform 0.3s ease;
-
-}
-
-.plan:hover {
-    transform: scale(1.05);
+    transition: all 0.3s ease;
 }
 
 .plan-title {
-    font-size: 20px;
+    font-size: 1.3rem;
     font-weight: bold;
+    color: #0050a5;
     margin-bottom: 10px;
+    text-transform: uppercase;
 }
 
 .plan-price {
-    font-size: 24px;
+    font-size: 1.8rem;
     color: #1d6ce2;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .plan-features {
     list-style: none;
     padding: 0;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    color: #444;
 }
 
 .plan-features li {
-    margin: 5px 0;
-    font-size: 14px;
-    color: #555;
+    margin: 10px 0;
+    font-size: 0.9rem;
+    padding-left: 25px;
+    position: relative;
+}
+
+.plan-features li:before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #4CAF50;
+}
+
+.plan-features li:last-child:before {
+    content: "✖";
+    color: #e64a19;
 }
 
 .plan-button {
-    display: inline-block;
-    padding: 10px 15px;
-    background-color: #1d6ce2;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(135deg, #1d6ce2, #0050a5);
+    color: white;
+    border: none;
+    border-radius: 6px;
     font-weight: bold;
     cursor: pointer;
-    border: none;
-}
-
-.plan-button:hover {
-    background-color: #1558b3;
-}
-
-/* Asegúrate de que estas clases estén presentes */
-.hidden {
-    display: none !important;
-}
-
-.form-step {
     transition: all 0.3s ease;
 }
 
+.plan-button:hover {
+    background: linear-gradient(135deg, #0050a5, #003d80);
+    transform: translateY(-2px);
+}
+
+/* Plan seleccionado */
 .selected-plan {
-    border: 2px solid #1d6ce2 !important;
-    transform: scale(1.03);
-}
-
-.error {
-    border: 2px solid #e64a19 !important;
-    animation: shake 0.5s;
-}
-/* Estilos para el select */
-#plan {
-    width: 100%;
-    max-width: 300px;
-    margin: 20px 0;
-    padding: 10px;
-    background: #005288;
-    border: none;
-    border-radius: 8px;
-    color: white;
-    font-size: 16px;
-    font-family: antonio;
-}
-
-#plan.error {
-    border: 2px solid #e64a19;
-    animation: shake 0.5s;
-}
-
-/* Estilos para las cards seleccionadas */
-.selected-plan {
-    border: 2px solid #1d6ce2 !important;
-    transform: scale(1.03);
-    box-shadow: 0 0 15px rgba(29, 108, 226, 0.5);
+    border: 2px solid #1d6ce2;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(29, 108, 226, 0.2);
 }
 
 .selected-plan .plan-price {
     color: #e64a19;
-    font-size: 26px;
+}
+
+/* Estilos para los botones de navegación en formulario multi-paso */
+.form-navigation {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+/* Media Queries para diferentes tamaños de pantalla */
+@media (min-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    
+    .form-grid-full {
+        grid-column: span 2;
+    }
+    
+    .plans {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .form-navigation {
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 767px) {
+    .contenedorppal {
+        margin-top: 60px;
+        padding: 15px;
+    }
+    
+    form {
+        padding: 20px;
+    }
+    
+    .form-title {
+        font-size: 1.5rem;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+}
+
+/* Estados de error */
+.error {
+    border: 2px solid #e64a19 !important;
+    animation: shake 0.5s;
+}
+
+.error-message {
+    color: #e64a19;
+    font-size: 0.75rem;
+    margin-top: 5px;
 }
 
 @keyframes shake {
@@ -208,48 +266,15 @@ a{
     75% { transform: translateX(5px); }
 }
 
-
-@media (min-width: 768px) {
-    .plans {
-        flex-direction: row;
-    }
+/* Utilidades */
+.hidden {
+    display: none !important;
 }
 
-/* Estilos responsive para móviles */
-@media (max-width: 767px) {
-    .contenedorppal {
-        margin-top: 25%; /* Ajusta el margen superior en móviles */
-    }
-    
-    form {
-        width: 90%; /* Formulario más ancho en móviles */
-        padding: 15px;
-        font-size: 1.5em; /* Texto más pequeño */
-    }
-    
-    form input,
-    form select {
-        width: 100%; /* Inputs a ancho completo */
-        margin-bottom: 10px;
-    }
-    
-    .plans {
-        flex-direction: column; /* Tarjetas en columna para móviles */
-    }
-    
-    .plan {
-        margin-bottom: 15px;
-    }
-    
-    /* Ajustes para el formulario paso a paso */
-    #step1 {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    #step1 input,
-    #step1 select {
-        margin-bottom: 15px;
-    }
+.text-center {
+    text-align: center;
 }
 
+.mt-4 {
+    margin-top: 20px;
+}

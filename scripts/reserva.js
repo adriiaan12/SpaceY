@@ -7,6 +7,8 @@ const preciosBase = {
     delta: 180
 };
 
+
+
 function mostrarPlanes() {
     // Validar campos obligatorios primero
     const requiredFields = document.querySelectorAll('#step1 [required]');
