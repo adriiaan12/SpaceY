@@ -82,18 +82,24 @@ section {
     height: 100vh; /* Ocupa el mismo espacio que las secciones */
 }
 
+/* Contenedor para agrupar el article y el footer */
+.article-footer-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Ocupa el mismo espacio que las secciones */
+}
+
 article {
     background-color: black;
-    color: white; /* Para que el texto sea visible */
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Hace que ocupe toda la altura como las secciones */
+    min-height: 100vh;
     position: relative;
-    overflow: hidden; /* Evita posibles desbordamientos */
+    overflow: hidden;
+    perspective: 1000px; /* Agrega profundidad */
 }
-
-
 
 article::before {
     content: "";
@@ -104,8 +110,7 @@ article::before {
     height: 100%;
     background: radial-gradient(white 1px, transparent 1px);
     background-size: 75px 75px;
-
-    opacity: 0.3; /* Para que los puntitos no sean demasiado fuertes */
+    opacity: 0.3;
     z-index: 0;
 }
 
@@ -114,11 +119,10 @@ article * {
     z-index: 1;
 }
 
-
 article ul {
     list-style: none;
     display: flex;
-    justify-content: center; /* Centrar imágenes */
+    justify-content: center;
     gap: 360px; /* Espacio entre imágenes */
     padding: 0;
 }
@@ -127,17 +131,46 @@ article li {
     display: inline-block;
 }
 
-article img {
-    width: 360px; /* Ajusta el tamaño según necesidad */
+/* Contenedor 3D */
+.image-container {
+    width: 360px;
     height: 360px;
-    border-radius: 10px; /* Bordes redondeados */
+    position: relative;
+    transform-style: preserve-3d; /* Mantiene la perspectiva */
+    transition: transform 0.6s ease-in-out;
 }
+
+/* Imagen delantera */
+.image-container .front,
+.image-container .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden; /* Oculta el reverso */
+}
+
+/* Imagen trasera (puede ser la misma o diferente) */
+.image-container .back {
+    transform: rotateY(180deg);
+    background: rgba(255, 255, 255, 0.1); /* Un fondo para visualizar la parte trasera */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+}
+
+/* Efecto de giro */
+.image-container:hover {
+    transform: rotateY(180deg);
+}
+
 
 /* Estilo para el footer */
 footer {
-    background-color: #36383B; /* Fondo gris */
+    background-color: #36383B;
     color: white;
     text-align: center;
     padding: 20px 0;
-    
 }
