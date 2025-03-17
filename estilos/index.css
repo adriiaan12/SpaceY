@@ -4,6 +4,22 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* Estilo adicional para el botón */
+.btn {
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente para el botón */
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Cambio de color cuando el ratón pasa por encima */
+}
+
 /*Estilo para la imagen principal */
 .ImagenPrincipal {
     width: 100%; /* Asegura que ocupe todo el ancho de la ventana */
@@ -14,9 +30,11 @@
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: -1; /* La pone en el fondo */
+    z-index: -3; /* La pone en el fondo */
     display: flex;
+    
 }
+
 
 .feature {
     
@@ -43,19 +61,83 @@ section {
 }
 
 
-
-
-/* Estilo adicional para el botón */
-.btn {
-    display: inline-block;
-    background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente para el botón */
-    padding: 10px 20px;
-    text-decoration: none;
-    color: white;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+#Cohetes {
+    position: absolute; /* Posiciona el texto sobre la imagen */
+    top: 3%; /* Ajusta la posición verticalmente */
+    left: 50%; /* Lo lleva al centro horizontal */
+    transform: translate(-50%, -50%); /* Centra exactamente */
+    color: white; /* Texto en blanco para contraste */
+    font-size: 3rem; /* Tamaño de letra grande */
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Sombra para mejorar la visibilidad */
 }
 
-.btn:hover {
-    background-color: rgba(0, 0, 0, 0.8); /* Cambio de color cuando el ratón pasa por encima */
+
+
+
+/* Contenedor para agrupar el article y el footer */
+.article-footer-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Ocupa el mismo espacio que las secciones */
+}
+
+article {
+    background-color: black;
+    color: white; /* Para que el texto sea visible */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Hace que ocupe toda la altura como las secciones */
+    position: relative;
+    overflow: hidden; /* Evita posibles desbordamientos */
+}
+
+
+
+article::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(white 1px, transparent 1px);
+    background-size: 75px 75px;
+
+    opacity: 0.3; /* Para que los puntitos no sean demasiado fuertes */
+    z-index: 0;
+}
+
+article * {
+    position: relative;
+    z-index: 1;
+}
+
+
+article ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Centrar imágenes */
+    gap: 360px; /* Espacio entre imágenes */
+    padding: 0;
+}
+
+article li {
+    display: inline-block;
+}
+
+article img {
+    width: 360px; /* Ajusta el tamaño según necesidad */
+    height: 360px;
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Estilo para el footer */
+footer {
+    background-color: #36383B; /* Fondo gris */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    
 }
