@@ -6,7 +6,11 @@ body
 
 }
 
-/* Contenedor del carrusel */
+.btn btn-primary info-btn{
+
+  align-items: center;
+
+}
 
 /* Botones del carrusel */
 .btn {
@@ -147,7 +151,16 @@ body
     flex: 0 0 calc(100% / 3);
     display: block;
     backface-visibility: visible;
+    
   }
+  .carousel-item:hover{
+
+    transform: scale(1.1);
+    transition: transform 0.5s;
+
+  }
+
+
   .multiple-card-slider .carousel-inner {
     display: flex;
   }
