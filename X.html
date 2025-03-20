@@ -31,30 +31,38 @@
 <body>
 
     <header>
-    
-      
         <nav class="nav-links" id="menunavegador">
-          <a href="./index.html"><img class ="logo" src="./images/logospacey-remove.png"  alt="SpaceY" title="SpaceY Logo"></a>
-          <ul>
-                
-                <li><a href="./salas.html">Cohetes</a></li>
-                <li><a href="./reserva.html">Reservas</a></li>
-                <li><a href="./X.html">Detalles</a></li>
+          <div class="logo-container">
+            <a href="./index.html"><img class="logo" src="./images/logospacey-remove.png" alt="SpaceY"
+                title="SpaceY Logo"></a>
+          </div>
+          <div class="nav-items">
+            <ul>
+              <li><a href="./salas.html" class="main-nav-link">Cohetes</a></li>
+              <li><a href="./reserva.html" class="main-nav-link">Reservas</a></li>
+              <li><a href="./X.html" class="main-nav-link">Detalles</a></li>
             </ul>
+          </div>
+    
+    
+    
+          <div class="menu-container">
             <button class="menu-btn" onclick="toggleMenu()">&#9776;</button>
-
+          </div>
         </nav>
-
-      
-    </header>
-    <aside id="sidebar" class="sidebar">
-      
+      </header>
+    
+      <!-- Aside desplegable -->
+      <aside id="sidebar" class="sidebar">
+        <!-- Los enlaces principales se insertarán aquí dinámicamente en móvil -->
+        <div class="sidebar-divider"></div>
         <a href="./sistema/sistema.html">VIAJES</a>
-      <a href="#">LAUNCHES</a>
-      <a href="#">CAREERS</a>
-      <a href="#">UPDATES</a>
-      <a href="#">SHOP</a>
-  </aside>
+        <a href="./aboutus.html">SOBRE NOSOTROS</a>
+        <a href="#">CAREERS</a>
+        <a href="#">UPDATES</a>
+        <a href="#">SHOP</a>
+      </aside>
+      
     <h1>Descripción de Cohetes</h1>
 
     <h2>Cohete Falcon 9</h2>
@@ -146,6 +154,8 @@
     <p>
         <strong>Misiones destacadas:</strong> Lanzamiento de la sonda Parker Solar Probe en 2018 para estudiar el Sol.
     </p>
+
+
 
     <script src="./scripts/nav.js" type="text/javascript"></script>
     <script src="./scripts/desplegable.js" type="text/javascript" defer></script>

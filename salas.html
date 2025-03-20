@@ -20,34 +20,37 @@
 <body>
 
     <header>
-
-
         <nav class="nav-links" id="menunavegador">
+          <div class="logo-container">
             <a href="./index.html"><img class="logo" src="./images/logospacey-remove.png" alt="SpaceY"
-                    title="SpaceY Logo"></a>
+                title="SpaceY Logo"></a>
+          </div>
+          <div class="nav-items">
             <ul>
-    
-                <li><a href="./salas.html">Cohetes</a></li>
-                <li><a href="./reserva.html">Reservas</a></li>
-                <li><a href="./X.html">Detalles</a></li>
+              <li><a href="./salas.html" class="main-nav-link">Cohetes</a></li>
+              <li><a href="./reserva.html" class="main-nav-link">Reservas</a></li>
+              <li><a href="./X.html" class="main-nav-link">Detalles</a></li>
             </ul>
+          </div>
+    
+    
+    
+          <div class="menu-container">
             <button class="menu-btn" onclick="toggleMenu()">&#9776;</button>
-    
+          </div>
         </nav>
+      </header>
     
-        <!-- Aside desplegable -->
-    
-    
-    
-    </header>
-    <aside id="sidebar" class="sidebar">
-    
+      <!-- Aside desplegable -->
+      <aside id="sidebar" class="sidebar">
+        <!-- Los enlaces principales se insertarán aquí dinámicamente en móvil -->
+        <div class="sidebar-divider"></div>
         <a href="./sistema/sistema.html">VIAJES</a>
-        <a href="#">LAUNCHES</a>
+        <a href="./aboutus.html">SOBRE NOSOTROS</a>
         <a href="#">CAREERS</a>
         <a href="#">UPDATES</a>
         <a href="#">SHOP</a>
-    </aside>
+      </aside>
 
     <div class="multiple-card-slider">
         <div id="carouselExampleControls" class="carousel" data-bs-ride="false">
@@ -55,11 +58,13 @@
                 <div class="carousel-item active">
                     <div class="card">
                         <a href="reserva.html?cohete=falcon"><img src="images/Falcon9.jpg" class="card-img-top" alt="Falcon 9"></a>
+                        
                         <div class="card-body">
                             <h5 class="card-title">Falcon 9</h5>
                             <p class="card-text">Capacidad: 22,800 kg a órbita terrestre baja.<br>
                                 Altura: 70 metros.<br>
                                 Velocidad máxima: 27,000 km/h.</p>
+                                <button style="width:50%;margin-left:auto;margin-right:auto;">RESERVA AQUI YA</button>
                             
                         </div>
                     </div>
@@ -222,12 +227,16 @@
 
 
     </section>
+    
 
 
 
     <footer>
         <p>&copy; 2025 SpaceY. Todos los derechos reservados.</p>
     </footer>
+
+
+
 
     
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

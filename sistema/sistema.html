@@ -17,31 +17,39 @@
 
   </head>
   <body class="opening hide-UI view-2D zoom-large data-close controls-close">
-<header>
-    
-      
-        <nav class="nav-links" id="menunavegador">
-          <a href="../index.html"><img class ="logo" src="../images/logospacey-remove.png"  alt="SpaceY" title="SpaceY Logo"></a>
+    <header>
+      <nav class="nav-links" id="menunavegador">
+        <div class="logo-container">
+          <a href="./index.html"><img class="logo" src="../images/logospacey-remove.png" alt="SpaceY"
+              title="SpaceY Logo"></a>
+        </div>
+        <div class="nav-items">
           <ul>
-                
-                <li><a href="../salas.html">Cohetes</a></li>
-                <li><a href="../reserva.html">Reservas</a></li>
-                <li><a href="../X.html">Detalles</a></li>
-            </ul>
-            <button class="menu-btn" onclick="toggleMenu()">&#9776;</button>
-
-        </nav>
-
-      
+            <li><a href="../salas.html" class="main-nav-link">Cohetes</a></li>
+            <li><a href="../reserva.html" class="main-nav-link">Reservas</a></li>
+            <li><a href="../X.html" class="main-nav-link">Detalles</a></li>
+          </ul>
+        </div>
+  
+  
+  
+        <div class="menu-container">
+          <button class="menu-btn" onclick="toggleMenu()">&#9776;</button>
+        </div>
+      </nav>
     </header>
+  
+    <!-- Aside desplegable -->
     <aside id="sidebar" class="sidebar">
-      
-      <a href="./sistema.html">VIAJES</a>
-      <a href="#">LAUNCHES</a>
+      <!-- Los enlaces principales se insertarán aquí dinámicamente en móvil -->
+      <div class="sidebar-divider"></div>
+      <a href="../sistema/sistema.html">VIAJES</a>
+      <a href="../aboutus.html">SOBRE NOSOTROS</a>
       <a href="#">CAREERS</a>
       <a href="#">UPDATES</a>
       <a href="#">SHOP</a>
-  </aside>
+    </aside>
+
     <div id="navbar">
       <a id="toggle-data" href="#data"><i class="icon-data"></i>Sistema</a>
       <!--

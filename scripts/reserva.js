@@ -1,10 +1,10 @@
 // Precios base por cohete
 const preciosBase = {
-    falcon: 100,
-    ariane: 150,
-    saturno: 200,
-    soyuz: 125,
-    delta: 180
+    falcon: 10000,
+    ariane: 15000,
+    saturno: 20000,
+    soyuz: 12500,
+    delta: 18000
 };
 
 
