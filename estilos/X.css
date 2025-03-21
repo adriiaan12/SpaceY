@@ -5,21 +5,13 @@
 }
 
 body{
-    background: url('../images/fotofondito.jpg') no-repeat center center/cover; /* ✅ Imagen de fondo */
-    background-size:cover; /* ✅ La imagen se ajusta al ancho y mantiene la proporción */
+
+    background: url('../images/fotofondito.jpg') no-repeat center center/cover; 
+    background-size:cover; 
     margin-top:15%;
-    background-attachment: fixed; /* ✅ Para que el fondo se quede fijo */
+    background-attachment: fixed; 
     color: #E8ECF3;
     font-family: antonio;
 
 }
 
-#map {
-    height: 500px;
-    width: 80%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    margin-left: auto; 
-    margin-right: auto;
-}

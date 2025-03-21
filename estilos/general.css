@@ -1,3 +1,15 @@
+@font-face {
+    font-family: 'antonio';
+    src: url("../images/Antonio-SemiBold.ttf") format(Truetype);
+}
+
+body {
+    
+    color: #E8ECF3;
+    font-family: antonio;
+}
+
+
 #menunavegador {
     position: fixed;
     top: 0;
