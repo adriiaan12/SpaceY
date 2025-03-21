@@ -1,13 +1,9 @@
-
-
-body
-{
+body {
   background: url('../images/fotofondito.jpg') no-repeat center center/cover;
 
 }
 
-
-.btn btn-primary info-btn{
+.btn btn-primary info-btn {
 
   align-items: center;
 
@@ -33,25 +29,43 @@ body
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-.prev { left: 10px; }
-.next { right: 10px; }
+.prev {
+  left: 10px;
+}
 
- /* Contenedor de la sección de cohetes */
+.next {
+  right: 10px;
+}
+.cohete {
+  display: none; /* Oculta todas las filas de los cohetes */
+}
+/* Contenedor de la sección de cohetes */
 .section-cohetes {
-  width: 80%;
-  margin: 40px auto;
+
+  margin-top: 5em;
   padding: 20px;
-  background: linear-gradient(135deg, #1b253873, #0d59dcba); /* Fondo degradado azul */
+  background: linear-gradient(135deg, #1b253873, #0d59dcba);
+  /* Fondo degradado azul */
   border-radius: 15px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
   text-align: center;
 }
 
+.align-center {
+  width: 80%;
+  text-align: center;
+  margin-left: 10em;
+  margin-right: 10em;
+
+}
+
+
 /* Estilo de la tabla */
 .table-cohetes {
   width: 100%;
   border-collapse: collapse;
-  background: rgba(255, 255, 255, 0.1); /* Fondo translúcido */
+  background: rgba(255, 255, 255, 0.1);
+  /* Fondo translúcido */
   border-radius: 10px;
   overflow: hidden;
 }
@@ -71,27 +85,31 @@ body
   color: white;
   font-size: 16px;
 }
+
 /* Estilos para el carrusel de tarjetas */
 
 
 
 
 .multiple-card-slider {
-  max-width: 1500px;
-  margin: 10em auto;
+
+  margin-top: 10em;
   padding: 0 1em;
 }
 
 
 
 
+
 .multiple-card-slider .carousel-inner {
   padding: 1em;
-  background: linear-gradient(135deg, #1b253873, #0d59dcba); /* Fondo degradado azul */
+  background: linear-gradient(135deg, #1b253873, #0d59dcba);
+  /* Fondo degradado azul */
   border-radius: 15px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
   width: 100%;
-  height: 50%; /* Puedes ajustar la altura a tu gusto */
+  height: 50%;
+  /* Puedes ajustar la altura a tu gusto */
   object-fit: cover;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -102,7 +120,8 @@ body
   margin: 0 0.5em;
   box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
   border: none;
-  background: rgba(255, 255, 255, 0.1); /* Fondo translúcido */
+  background: rgba(255, 255, 255, 0.1);
+  /* Fondo translúcido */
   border-radius: 10px;
   overflow: hidden;
   color: white;
@@ -114,7 +133,8 @@ body
 /* Contenedor fijo para la imagen */
 .multiple-card-slider .card .card-img-top {
   width: 100%;
-  height: 200px; /* Ajusta esta altura según prefieras */
+  height: 200px;
+  /* Ajusta esta altura según prefieras */
   object-fit: cover;
   flex-shrink: 0;
 }
@@ -142,48 +162,12 @@ body
 }
 
 /* Flechas de navegación */
-.prev { left: 10px; }
-.next { right: 10px; }
-
-footer {
-  background-color: #36383B;
-  color: white;
-  text-align: center;
-  padding: 20px 0;
+.prev {
+  left: 10px;
 }
 
-
-#redes {
-
-  display: flex;
-  list-style: none;
-  align-items: flex-start;
-  justify-content: space-between;
-  
-  /* Alinea los elementos en columna */
-  flex-direction: column;
-  /*separa los elementos*/
-  gap: 10px;
-  font-family: 'Antonio', sans-serif;
-}
-
-#redes li a {
-  text-decoration: none;
-  /* Quita el subrayado del enlace */
-  color: white;
-  /* Color normal del texto */
-  display: flex;
-  justify-content: space-around;
-  gap: 8px;
-  /* Espacio entre el icono y el texto */
-  font-size: 16px;
-  font-weight: bold;
-  transition: color 0.3s ease-in-out;
-}
-
-#redes li a:hover {
-  color: #f39c12;
-  /* Cambia el color del texto al hacer hover */
+.next {
+  right: 10px;
 }
 
 /* Diseño responsivo */
@@ -193,9 +177,10 @@ footer {
     flex: 0 0 calc(100% / 3);
     display: block;
     backface-visibility: visible;
-    
+
   }
-  .carousel-item:hover{
+
+  .carousel-item:hover {
 
     transform: scale(1.1);
     transition: transform 0.5s;

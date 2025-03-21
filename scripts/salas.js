@@ -43,3 +43,22 @@ $(document).ready(function () {
         }
     });
 });
+
+
+document.getElementById("selector-cohete").addEventListener("change", function () {
+    let seleccion = this.value; // Obtiene el valor del select
+    let filas = document.querySelectorAll(".cohete");
+
+    // Oculta todas las filas de cohetes
+    filas.forEach(fila => {
+        fila.style.display = "none";
+    });
+
+    // Muestra solo las filas del cohete seleccionado
+    if (seleccion) {
+        let filasMostrar = document.querySelectorAll("." + seleccion);
+        filasMostrar.forEach(fila => {
+            fila.style.display = "table-row";
+        });
+    }
+});
