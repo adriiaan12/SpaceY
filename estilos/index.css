@@ -334,4 +334,92 @@ article li {
         padding: 5%;
     }
 
+    
+
+}
+
+/* RESPONSIVE */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+
+    
+
+    .feature {
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .ImagenPrincipal {
+        width: 100vw;
+        /* 100% del ancho de la pantalla */
+        height: 100vh;
+        /* 100% de la altura de la pantalla */
+        object-fit: cover;
+        /* Ajusta la imagen sin deformarla */
+        display: block;
+        /* Evita márgenes extra */
+    }
+
+    /* Ajuste especial para la segunda imagen */
+    #segundafoto {
+        /* Ajusta la imagen sin deformarla */
+        object-fit: cover;
+        object-position: 30%;
+
+    }
+
+    
+
+    .Cohetes {
+        font-size: 2rem;
+    }
+
+    .image-container {
+        width: 300px;
+        height: 300px;
+
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+
+    article ul {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+    }
+
+    article li {
+        margin: 10px;
+    }
+
+    .Cohetes {
+
+        display: none;
+    }
+
+    .image-container .back {
+        transform: rotateY(180deg);
+        background: rgba(255, 255, 255, 0.1);
+        /* Un fondo para visualizar la parte trasera */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 14px;
+        text-align: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 5%;
+    }
+
+    
+
 }
