@@ -57,6 +57,17 @@ form {
     margin-bottom: 15px;
 }
 
+/* Asegurar que textarea ocupe todo el ancho disponible */
+.textarea {
+    width: 100%;
+    resize: vertical; /* Permitir que el usuario ajuste la altura */
+}
+
+/* Hacer que el textarea ocupe toda la fila del grid en pantallas más grandes */
+.form-full {
+    grid-column: span 2;
+}
+
 /* Etiquetas */
 .form-group label {
     display: block;
@@ -204,9 +215,43 @@ form {
 
 /* Estilos para los botones de navegación en formulario multi-paso */
 .form-navigation {
+    
     display: flex;
     justify-content: center;
+
     margin-top: 25px;
+
+}
+
+.btn-back {
+    background: linear-gradient(135deg, #e64a19, #b53d17); /* Color diferente para indicar retroceso */
+    box-shadow: 0 4px 15px rgba(230, 74, 25, 0.3);
+}
+
+.btn-back:hover {
+    background: linear-gradient(135deg, #b53d17, #8a2b11);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(230, 74, 25, 0.4);
+}
+
+#retroceso{
+    display:flex;
+    justify-content: flex-start;
+    align-self: flex-end;
+
+    margin-top: 25px;
+
+}
+
+.botones{
+    display: flex;
+    justify-content: space-between;
+}
+
+.botone{
+    grid-column: span 2;
+    display: flex;
+    justify-content: flex-end;
 }
 
 /* Media Queries para diferentes tamaños de pantalla */
@@ -219,6 +264,8 @@ form {
     .form-grid-full {
         grid-column: span 2;
     }
+
+
     
     .plans {
         grid-template-columns: repeat(3, 1fr);

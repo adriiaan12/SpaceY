@@ -7,6 +7,20 @@ const preciosBase = {
     delta: 18000
 };
 
+function retrocederPaso() {
+    document.getElementById('step2').classList.add('hidden'); // Oculta el segundo paso
+    document.getElementById('step1').classList.remove('hidden'); // Muestra el primer paso
+}
+
+function dobleapellido(input) {
+    let regex = /^[a-zA-ZáéíóúñÁÉÍÓÚÑ]+(?:\s+[a-zA-ZáéíóúñÁÉÍÓÚÑ]+)+$/; // Permite nombres con tildes
+    if (!regex.test(input.value)) {
+        alert("Por favor, inserte dos apellidos válidos.");
+        input.value = ""; // Borra el campo si es inválido
+        return false;   
+    }
+    return true;
+}
 
 
 function mostrarPlanes() {
@@ -23,6 +37,12 @@ function mostrarPlanes() {
         }
     });
 
+    // Validar específicamente el campo de apellidos
+    const inputApellidos = document.getElementById("apellidos");
+    if (!dobleapellido(inputApellidos)) {
+        isValid = false; // Evita avanzar si el apellido no es válido
+    }
+
     if (isValid) {
         // Obtener el cohete seleccionado
         const coheteSeleccionado = document.querySelector('select[name="cohetes"]').value;
@@ -38,6 +58,7 @@ function mostrarPlanes() {
         document.getElementById('step2').classList.remove('hidden');
     }
 }
+
 
 function seleccionarPlan(plan) {
     const coheteSeleccionado = document.querySelector('select[name="cohetes"]').value;
