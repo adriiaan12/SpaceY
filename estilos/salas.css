@@ -36,9 +36,30 @@ body {
 .next {
   right: 10px;
 }
+.btnReserva {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #004080; /* Azul oscuro */
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btnReserva:hover {
+  background-color: #003366; /* Azul más oscuro cuando se pasa el ratón */
+}
+
+ 
 .cohete {
   display: none; /* Oculta todas las filas de los cohetes */
 }
+
+
 /* Contenedor de la sección de cohetes */
 .section-cohetes {
 
@@ -98,7 +119,9 @@ body {
 }
 
 
-
+.selector-cohete{
+  display: none;
+}
 
 
 .multiple-card-slider .carousel-inner {

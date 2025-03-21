@@ -68,15 +68,15 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="card">
-                        <a href="reserva.html?cohete=falcon"><img src="images/Falcon9.jpg" class="card-img-top"
-                                alt="Falcon 9"></a>
+                        <img src="images/Falcon9.jpg" class="card-img-top cohete-img" data-cohete="falcon9"
+                                alt="Falcon 9">
 
                         <div class="card-body">
                             <h5 class="card-title">Falcon 9</h5>
                             <p class="card-text">Capacidad: 22,800 kg a órbita terrestre baja.<br>
                                 Altura: 70 metros.<br>
                                 Velocidad máxima: 27,000 km/h.</p>
-                            <button style="width:50%;margin-left:auto;margin-right:auto;">RESERVA AQUI YA</button>
+                            <a href="reserva.html?cohete=falcon"><button class="btnReserva">RESERVA AQUI YA</button></a>
 
                         </div>
                     </div>
@@ -86,52 +86,56 @@
 
                 <div class="carousel-item">
                     <div class="card">
-                        <a href="reserva.html?cohete=saturno"><img src="images/SaturnV.avif" class="card-img-top"
-                                alt="Saturn V"></a>
+                        <img src="images/SaturnV.avif" class="card-img-top cohete-img" data-cohete="saturnv"
+                                alt="Saturn V">
                         <div class="card-body">
                             <h5 class="card-title">Saturn V</h5>
                             <p class="card-text">Capacidad: 140,000 kg a órbita terrestre baja.<br>
                                 Altura: 110.6 metros.<br>
                                 Velocidad máxima: 39,900 km/h.</p>
+                                <a href="reserva.html?cohete=saturno"><button class="btnReserva">RESERVA AQUI YA</button></a>
 
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="card">
-                        <a href="reserva.html?cohete=ariane"><img src="images/Ariane5.jpg" class="card-img-top"
-                                alt="Ariane 5"></a>
+                        <img src="images/Ariane5.jpg" class="card-img-top cohete-img" data-cohete="ariane5"
+                                alt="Ariane 5">
                         <div class="card-body">
                             <h5 class="card-title">Ariane 5</h5>
                             <p class="card-text">Capacidad: 10,865 kg a órbita geoestacionaria.<br>
                                 Altura: 52 metros.<br>
                                 Velocidad máxima: 28,000 km/h.</p>
+                                <a href="reserva.html?cohete=ariane"><button class="btnReserva">RESERVA AQUI YA</button></a>
 
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="card">
-                        <a href="reserva.html?cohete=soyuz"><img src="images/Soyuz_14.jpg" class="card-img-top"
-                                alt="Soyuz 14"></a>
+                        <img src="images/Soyuz_14.jpg" class="card-img-top cohete-img" data-cohete="soyuz"
+                                alt="Soyuz 14">
                         <div class="card-body">
                             <h5 class="card-title">Soyuz 14</h5>
                             <p class="card-text">Capacidad: 7,100 kg a órbita terrestre baja.<br>
                                 Altura: 50 metros.<br>
                                 Velocidad máxima: 28,000 km/h.</p>
+                                <a href="reserva.html?cohete=soyuz"><button class="btnReserva">RESERVA AQUI YA</button></a>
 
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="card">
-                        <a href="reserva.html?cohete=delta"><img src="images/DELTAivHeavy.jpg" class="card-img-top"
-                                alt="Delta IV Heavy"></a>
+                        <img src="images/DELTAivHeavy.jpg" class="card-img-top cohete-img" data-cohete="deltaiv"
+                                alt="Delta IV Heavy">
                         <div class="card-body">
                             <h5 class="card-title">Delta IV Heavy</h5>
                             <p class="card-text">Capacidad: 28,790 kg a órbita terrestre baja.<br>
                                 Altura: 72 metros.<br>
                                 Velocidad máxima: 27,000 km/h.</p>
+                                <a href="reserva.html?cohete=delta"><button class="btnReserva">RESERVA AQUI YA</button></a>
 
                         </div>
                     </div>
@@ -148,20 +152,6 @@
         </div>
     </div>
 
-
-
-
-
-    <section class="section-cohetes">
-        <label for="selector-cohete">Selecciona un cohete:</label>
-        <select id="selector-cohete">
-            <option value="" selected disabled>Selecciona un cohete</option>
-            <option value="falcon9">Falcon 9</option>
-            <option value="saturnv">Saturn V</option>
-            <option value="ariane5">Ariane 5</option>
-            <option value="soyuz">Soyuz</option>
-            <option value="deltaiv">Delta IV Heavy</option>
-        </select>
     
         <table class="table-cohetes">
             <tbody id="tabla-cohetes">
@@ -247,6 +237,8 @@
             </tbody>
         </table>
     </section>
+    <p id="cohete-seleccionado" style="font-size: 18px; font-weight: bold; margin-top: 10px;"></p>
+
 </div>
 
 

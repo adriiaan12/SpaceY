@@ -44,21 +44,44 @@ $(document).ready(function () {
     });
 });
 
-
-document.getElementById("selector-cohete").addEventListener("change", function () {
-    let seleccion = this.value; // Obtiene el valor del select
-    let filas = document.querySelectorAll(".cohete");
-
-    // Oculta todas las filas de cohetes
-    filas.forEach(fila => {
+document.addEventListener("DOMContentLoaded", function () {  //para asegurarnos que se cargue 
+    document.querySelectorAll(".cohete").forEach(fila => {
         fila.style.display = "none";
     });
+});
 
-    // Muestra solo las filas del cohete seleccionado
-    if (seleccion) {
-        let filasMostrar = document.querySelectorAll("." + seleccion);
-        filasMostrar.forEach(fila => {
-            fila.style.display = "table-row";
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    let filas = document.querySelectorAll(".cohete");
+
+    // Selecciona todas las imágenes dentro de las tarjetas
+    let imagenes = document.querySelectorAll(".cohete-img");
+
+    imagenes.forEach(img => {
+        img.addEventListener("click", function () {
+            let coheteSeleccionado = this.getAttribute("data-cohete");
+
+            // Mostrar en consola
+            console.log("Cohete seleccionado:", coheteSeleccionado);
+
+            // Mostrar en una etiqueta <p> con el id "cohete-seleccionado"
+            let mensaje = document.getElementById("cohete-seleccionado");
+            mensaje.textContent = "Cohete seleccionado: " + coheteSeleccionado;
+
+            // Oculta todas las filas primero
+            filas.forEach(fila => {
+                fila.style.display = "none";
+            });
+
+            // Muestra solo las filas del cohete seleccionado
+            let filasMostrar = document.querySelectorAll("." + coheteSeleccionado);
+            filasMostrar.forEach(fila => {
+                fila.style.display = "table-row";
+            });
         });
-    }
+    });
 });
