@@ -9,6 +9,30 @@ body {
     font-family: antonio;
 }
 
+.subrayado ul li a{
+    position: relative; /* NECESARIO para que ::after se posicione correctamente */
+    display: inline-block;
+    padding-bottom: 3px;
+}
+
+.subrayado ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    width: 100%;
+    height: 2px;
+    background: #f39c12;
+    transform: scaleX(0);
+    transform-origin: center; /* Hace que la línea crezca desde la izquierda */
+    
+    transition: transform 0.3s ease-in-out;
+}
+
+.subrayado ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: center; /* Hace que la línea crezca desde la izquierda */
+}
 
 #menunavegador {
     position: fixed;
