@@ -64,6 +64,7 @@ body {
 .section-cohetes {
 
   margin-top: 5em;
+  margin-bottom: 5em;
   padding: 20px;
   background: linear-gradient(135deg, #1b253873, #0d59dcba);
   /* Fondo degradado azul */
@@ -89,6 +90,8 @@ body {
   /* Fondo translúcido */
   border-radius: 10px;
   overflow: hidden;
+  margin-top: 2.5em;
+  margin-bottom: 5em;
 }
 
 /* Encabezados de la tabla */
