@@ -6,6 +6,7 @@ body
 
 }
 
+
 .btn btn-primary info-btn{
 
   align-items: center;
@@ -143,6 +144,47 @@ body
 /* Flechas de navegación */
 .prev { left: 10px; }
 .next { right: 10px; }
+
+footer {
+  background-color: #36383B;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+
+#redes {
+
+  display: flex;
+  list-style: none;
+  align-items: flex-start;
+  justify-content: space-between;
+  
+  /* Alinea los elementos en columna */
+  flex-direction: column;
+  /*separa los elementos*/
+  gap: 10px;
+  font-family: 'Antonio', sans-serif;
+}
+
+#redes li a {
+  text-decoration: none;
+  /* Quita el subrayado del enlace */
+  color: white;
+  /* Color normal del texto */
+  display: flex;
+  justify-content: space-around;
+  gap: 8px;
+  /* Espacio entre el icono y el texto */
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+#redes li a:hover {
+  color: #f39c12;
+  /* Cambia el color del texto al hacer hover */
+}
 
 /* Diseño responsivo */
 @media (min-width: 768px) {

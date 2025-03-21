@@ -99,6 +99,14 @@ section {
     top: 6%;
 }
 
+/* Estilo para el footer */
+footer {
+    background-color: #36383B;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
 
 #redes {
 
@@ -239,13 +247,7 @@ article li {
 }
 
 
-/* Estilo para el footer */
-footer {
-    background-color: #36383B;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-}
+
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
