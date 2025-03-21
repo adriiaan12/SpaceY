@@ -65,12 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
         img.addEventListener("click", function () {
             let coheteSeleccionado = this.getAttribute("data-cohete");
 
-            // Mostrar en consola
-            console.log("Cohete seleccionado:", coheteSeleccionado);
-
-            // Mostrar en una etiqueta <p> con el id "cohete-seleccionado"
-            let mensaje = document.getElementById("cohete-seleccionado");
-            mensaje.textContent = "Cohete seleccionado: " + coheteSeleccionado;
+           
 
             // Oculta todas las filas primero
             filas.forEach(fila => {
