@@ -1,19 +1,23 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 @font-face {
     font-family: 'antonio';
     src: url("../images/Antonio-SemiBold.ttf") format(Truetype);
 }
 
-body{font-family: antonio;}
+body {
+    font-family: antonio;
+}
+
 /* Estilo adicional para el botón */
 .btn {
     display: inline-block;
-    background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente para el botón */
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Fondo semitransparente para el botón */
     padding: 10px 20px;
     text-decoration: none;
     color: white;
@@ -22,68 +26,87 @@ body{font-family: antonio;}
 }
 
 .btn:hover {
-    background-color: rgba(0, 0, 0, 0.8); /* Cambio de color cuando el ratón pasa por encima */
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Cambio de color cuando el ratón pasa por encima */
 }
 
 /*Estilo para la imagen principal */
 .ImagenPrincipal {
-    width: 100%; /* Asegura que ocupe todo el ancho de la ventana */
-    height: 100vh; /* Asegura que ocupe todo el alto de la ventana */
-    
-    position: relative; /* Se posiciona de manera absoluta */
+    width: 100%;
+    /* Asegura que ocupe todo el ancho de la ventana */
+    height: 100vh;
+    /* Asegura que ocupe todo el alto de la ventana */
+
+    position: relative;
+    /* Se posiciona de manera absoluta */
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: -3; /* La pone en el fondo */
+    z-index: -3;
+    /* La pone en el fondo */
     display: flex;
-    
+
 }
 
 
 .feature {
-    
+
     position: absolute;
     z-index: 1;
     color: white;
     text-align: center;
     padding: 20px;
-    top:80%;
+    top: 80%;
     left: 10%;
     transform: translate(-50%, -50%);
-    
+
 }
 
 
 /* Estilo para la segunda sección "Nuestros Cohetes" */
 section {
-    
-    background-color: #f1f1f1; /* Fondo gris claro para la segunda sección */
+
+    background-color: #f1f1f1;
+    /* Fondo gris claro para la segunda sección */
     position: relative;
-    z-index: 2; /* Asegura que la segunda sección esté por encima de la imagen*/ 
+    z-index: 2;
+    /* Asegura que la segunda sección esté por encima de la imagen*/
     margin: 0;
     padding: 0;
 }
 
 
 .Cohetes {
-    position: absolute; /* Posiciona el texto sobre la imagen */
-    top: 3%; /* Ajusta la posición verticalmente */
-    left: 50%; /* Lo lleva al centro horizontal */
-    transform: translate(-50%, -50%); /* Centra exactamente */
-    color: white; /* Texto en blanco para contraste */
-    font-size: 3rem; /* Tamaño de letra grande */
+    position: absolute;
+    /* Posiciona el texto sobre la imagen */
+    top: 3%;
+    /* Ajusta la posición verticalmente */
+    left: 50%;
+    /* Lo lleva al centro horizontal */
+    transform: translate(-50%, -50%);
+    /* Centra exactamente */
+    color: white;
+    /* Texto en blanco para contraste */
+    font-size: 3rem;
+    /* Tamaño de letra grande */
     font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Sombra para mejorar la visibilidad */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    /* Sombra para mejorar la visibilidad */
 }
 
-#Noticia{top:6%;}
+#Noticia {
+    top: 6%;
+}
 
 
-#redes{ 
-    margin-right: 90%;
+#redes {
+
     display: flex;
+    list-style: none;
+    align-items: flex-start;
     justify-content: space-between;
+    margin-left: 1%;
     /* Alinea los elementos en columna */
     flex-direction: column;
     /*separa los elementos*/
@@ -92,18 +115,22 @@ section {
 }
 
 #redes li a {
-    text-decoration: none; /* Quita el subrayado del enlace */
-    color: white; /* Color normal del texto */
+    text-decoration: none;
+    /* Quita el subrayado del enlace */
+    color: white;
+    /* Color normal del texto */
     display: flex;
-    align-items: center;
-    gap: 8px; /* Espacio entre el icono y el texto */
+    justify-content: space-around;
+    gap: 8px;
+    /* Espacio entre el icono y el texto */
     font-size: 16px;
     font-weight: bold;
     transition: color 0.3s ease-in-out;
 }
 
 #redes li a:hover {
-    color: #f39c12; /* Cambia el color del texto al hacer hover */
+    color: #f39c12;
+    /* Cambia el color del texto al hacer hover */
 }
 
 
@@ -113,14 +140,16 @@ section {
 .article-footer-container {
     display: flex;
     flex-direction: column;
-    height: 100vh; /* Ocupa el mismo espacio que las secciones */
+    height: 100vh;
+    /* Ocupa el mismo espacio que las secciones */
 }
 
 /* Contenedor para agrupar el article y el footer */
 .article-footer-container {
     display: flex;
     flex-direction: column;
-    height: 100vh; /* Ocupa el mismo espacio que las secciones */
+    height: 100vh;
+    /* Ocupa el mismo espacio que las secciones */
 }
 
 article {
@@ -132,7 +161,8 @@ article {
     min-height: 100vh;
     position: relative;
     overflow: hidden;
-    perspective: 1000px; /* Agrega profundidad */
+    perspective: 1000px;
+    /* Agrega profundidad */
 }
 
 article::before {
@@ -157,7 +187,8 @@ article ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 20%; /* Espacio entre imágenes */
+    gap: 20%;
+    /* Espacio entre imágenes */
     padding: 0;
 }
 
@@ -170,7 +201,8 @@ article li {
     width: 360px;
     height: 360px;
     position: relative;
-    transform-style: preserve-3d; /* Mantiene la perspectiva */
+    transform-style: preserve-3d;
+    /* Mantiene la perspectiva */
     transition: transform 0.6s ease-in-out;
 }
 
@@ -181,13 +213,15 @@ article li {
     width: 100%;
     height: 100%;
     border-radius: 10px;
-    backface-visibility: hidden; /* Oculta el reverso */
+    backface-visibility: hidden;
+    /* Oculta el reverso */
 }
 
 /* Imagen trasera (puede ser la misma o diferente) */
 .image-container .back {
     transform: rotateY(180deg);
-    background: rgba(255, 255, 255, 0.1); /* Un fondo para visualizar la parte trasera */
+    background: rgba(255, 255, 255, 0.1);
+    /* Un fondo para visualizar la parte trasera */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -215,42 +249,87 @@ footer {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
+
+
     .nav-items {
         display: none;
     }
+
     .menu-container {
         display: block;
     }
+
     .feature {
         top: 70%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
-    .contenedor-principal {
-        padding: 30px;
+
+    .ImagenPrincipal {
+        width: 100vw;
+        /* 100% del ancho de la pantalla */
+        height: 100vh;
+        /* 100% de la altura de la pantalla */
+        object-fit: cover;
+        /* Ajusta la imagen sin deformarla */
+        display: block;
+        /* Evita márgenes extra */
     }
+
+    /* Ajuste especial para la segunda imagen */
+    #segundafoto {
+        /* Ajusta la imagen sin deformarla */
+        object-fit: cover;
+        object-position: 30%;
+
+    }
+
     .Cohetes {
         font-size: 2rem;
     }
-    .article-footer-container {
-        padding: 30px;
-    }
+
     .image-container {
-        width: 250px;
-        height: 250px;
-    }
-    article {
-        flex-direction: column;
-        
-    }
-    article ul{
-        display: flex;
-        flex-direction: column;
-        
+        width: 200px;
+        height: 200px;
+
     }
 
-    article li{
+    article {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+
+    article ul {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    article li {
         margin: 10px;
     }
-    
+
+    .Cohetes {
+
+        display: none;
+    }
+
+    .image-container .back {
+        transform: rotateY(180deg);
+        background: rgba(255, 255, 255, 0.1);
+        /* Un fondo para visualizar la parte trasera */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 14px;
+        text-align: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 5%;
+    }
+
 }
