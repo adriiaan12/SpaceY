@@ -4,6 +4,12 @@
     src: url("../images/Antonio-SemiBold.ttf") format(Truetype);
 }
 
+ul{
+    list-style: none;
+}
+p{
+    margin-bottom: 20px;
+}
 body{
 
     background: url('../images/nuevo2.jpg') no-repeat center center/cover; 
@@ -12,7 +18,11 @@ body{
     background-attachment: fixed; 
     color: #E8ECF3;
     font-family: antonio;
+    text-align: center;
 
+}
+h2,h1 {
+    font-family: 'Orbitron';
 }
 
 .ppal{
@@ -37,6 +47,8 @@ body{
     gap: 15px;
     width: 100%;
     align-items: center; /* Centra verticalmente */
+    padding: 3%;
+    
 }
 .sec1 img {
     width: 100%;
@@ -44,6 +56,11 @@ body{
     border-radius: 16px;
 }
 .sec1 p {
+    
     font-size: 1.2rem;
     line-height: 1.6;
+    text-align: left;
+    
+
 }
+
