@@ -1,61 +1,71 @@
 <!doctype html>
 <html lang="pt-br">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable = no">
-    <title dir="ltr">Viajes</title>
-    <link rel="stylesheet" href="css/styles.css">
-        <!-- Hoja de estilo -->
-        <link  href="../estilos/general.css" rel="stylesheet">
-        <link  href="../estilos/index.css" rel="stylesheet">
-       
-    
-        <!-- Google Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
 
-  </head>
-  <body class="opening hide-UI view-2D zoom-large data-close controls-close">
-    <header>
-      <nav class="nav-links" id="menunavegador">
-        <div class="logo-container">
-          <a href="../index.html"><img class="logo" src="../images/logospacey-remove.png" alt="SpaceY"
-              title="SpaceY Logo"></a>
-        </div>
-        <div class="nav-items subrayado">
-          <ul>
-            <li><a href="../salas.html" class="main-nav-link">Cohetes</a></li>
-            <li><a href="../reserva.html" class="main-nav-link">Reservas</a></li>
-            <li><a href="../X.html" class="main-nav-link">Detalles</a></li>
-          </ul>
-        </div>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable = no">
   
-  
-  
-        <div class="menu-container">
-          <button class="menu-btn" onclick="toggleMenu()">&#9776;</button>
-        </div>
-      </nav>
-    </header>
-  
-    <!-- Aside desplegable -->
-    <aside id="sidebar" class="sidebar">
-      <!-- Los enlaces principales se insertarán aquí dinámicamente en móvil -->
-      <div class="sidebar-divider"></div>
-      <a href="../sistema/sistema.html">VIAJES</a>
-      <a href="../aboutus.html">SOBRE NOSOTROS</a>
-      <a href="../contacto.html">CONTACTO</a>
+  <title dir="ltr">Viajes</title>
 
-    </aside>
-    <div class="contenedor">
+  <!-- Bootstrap CSS (desde assets) -->
+  <link rel="stylesheet" href="../assets/bootstrap/dist/css/bootstrap.min.css">
+  
+ 
+  <!-- Hoja de estilo -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="../estilos/general.css" rel="stylesheet">
+  <link href="../estilos/index.css" rel="stylesheet">
+
+  <!-- icono -->
+  <link rel="icon" href="../images/logospacey-icono.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="opening hide-UI view-2D zoom-large data-close controls-close">
+  <header>
+    <nav class="nav-links" id="menunavegador">
+      <div class="logo-container">
+        <a href="../index.html"><img class="logo" src="../images/logospacey-remove.png" alt="SpaceY"
+            title="SpaceY Logo"></a>
+      </div>
+      <div class="nav-items subrayado">
+        <ul>
+          <li><a href="../salas.html" class="main-nav-link">Cohetes</a></li>
+          <li><a href="../reserva.html" class="main-nav-link">Reservas</a></li>
+          <li><a href="../X.html" class="main-nav-link">Detalles</a></li>
+        </ul>
+      </div>
+
+
+
+      <div class="menu-container">
+        <button class="menu-btn" onclick="toggleMenu()">&#9776;</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Aside desplegable -->
+  <aside id="sidebar" class="sidebar">
+    <!-- Los enlaces principales se insertarán aquí dinámicamente en móvil -->
+    <div class="sidebar-divider"></div>
+    <a href="../sistema/sistema.html">VIAJES</a>
+    <a href="../aboutus.html">SOBRE NOSOTROS</a>
+    <a href="../contacto.html">CONTACTO</a>
+
+  </aside>
+  <div class="contenedor">
 
     <div id="navbar">
       <a id="toggle-data" href="#data" style="margin-top: 180px;"><i class="icon-data"></i>Sistema</a>
       <!--
       <h1>Sistema Solar 3D</h1>-->
-     <!-- <a id="toggle-controls" href="#controls"><i class="icon-controls"></i>Controles</a> -->
+      <!-- <a id="toggle-controls" href="#controls"><i class="icon-controls"></i>Controles</a> -->
     </div>
 
     <!--<div id="data" style="margin-top: 180px;">
@@ -68,7 +78,7 @@
       <a class="saturn" title="saturn" href="#saturnspeed">Saturno</a>
 
     </div>-->
-<!--
+    <!--
     <div id="controls">
       <label class="set-view">
         <input type="checkbox">
@@ -200,66 +210,67 @@
         </div>
       </div>
     </div>
-  <div class="footer-info">
-    
-<div id="data">
-    <div class="destination">
-       
-        <h2 class="h2"><a class="mars" title="mars" href="#marsspeed">Viaje a Marte</a></h2>
-        <p>Descubre el planeta rojo con una experiencia inolvidable.</p>
-        <ul>
+    <div class="footer-info">
+
+      <div id="data">
+        <div class="destination">
+
+          <h2 class="h2"><a class="mars" title="mars" href="#marsspeed">Viaje a Marte</a></h2>
+          <p>Descubre el planeta rojo con una experiencia inolvidable.</p>
+          <ul>
             <li>➤ Tour por las instalaciones de despegue</li>
             <li>➤ Visita guiada por la superficie marciana</li>
             <li>➤ Alojamiento en el M&oacute;dulo Marciano</li>
             <li>➤ Comidas incluidas durante todo el viaje</li>
             <li>➤ Simulaciones de exploraci&oacute;n con realidad virtual</li>
-        </ul>
-        <p class="duration">Duraci&oacute;n estimada: 6 meses ida y vuelta</p>
-       
-    </div>
+          </ul>
+          <p class="duration">Duraci&oacute;n estimada: 6 meses ida y vuelta</p>
 
-    <div class="destination">
-        <h2><a class="jupiter" title="jupiter" href="#jupiterspeed">Viaje a Júpiter</a></h2>
-        <p>Explora el gigante gaseoso y sus lunas fascinantes.</p>
-        <ul>
+        </div>
+
+        <div class="destination">
+          <h2><a class="jupiter" title="jupiter" href="#jupiterspeed">Viaje a Júpiter</a></h2>
+          <p>Explora el gigante gaseoso y sus lunas fascinantes.</p>
+          <ul>
             <li>➤ Visita al Observatorio Espacial</li>
             <li>➤ Sobrevuelo de la Gran Mancha Roja</li>
             <li>➤ Tour por las lunas Europa y Gan&iacute;medes</li>
             <li>➤ Alojamiento en la Estaci&oacute;n Orbital</li>
             <li>➤ Experiencia gastron&oacute;mica espacial</li>
-        </ul>
-        <p class="duration">Duraci&oacute;n estimada: 1 a&ntilde;o ida y vuelta</p>
-       
-    </div>
+          </ul>
+          <p class="duration">Duraci&oacute;n estimada: 1 a&ntilde;o ida y vuelta</p>
 
-    <div class="destination">
-        <h2><a class="saturn" title="saturn" href="#saturnspeed">Viaje a Saturno</a></h2>
-        <p>Admira los impresionantes anillos y sus lunas &uacute;nicas.</p>
-        <ul>
+        </div>
+
+        <div class="destination">
+          <h2><a class="saturn" title="saturn" href="#saturnspeed">Viaje a Saturno</a></h2>
+          <p>Admira los impresionantes anillos y sus lunas &uacute;nicas.</p>
+          <ul>
             <li>➤ Tour por los anillos de Saturno</li>
             <li>➤ Exploraci&oacute;n de la luna Tit&aacute;n</li>
             <li>➤ Conferencias con astr&oacute;nomos y expertos</li>
             <li>➤ Alojamiento en la Estaci&oacute;n de Exploraci&oacute;n Orbital</li>
             <li>➤ Actividades de observaci&oacute;n astron&oacute;mica</li>
-        </ul>
-        <p class="duration">Duraci&oacute;n estimada: 3 a&ntilde;os ida y vuelta</p>
-        
+          </ul>
+          <p class="duration">Duraci&oacute;n estimada: 3 a&ntilde;os ida y vuelta</p>
+
+        </div>
+      </div>
     </div>
   </div>
-  </div>
-</div>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
 
-    <script type="text/javascript">
-    if (typeof jQuery == 'undefined') { 
+  <script type="text/javascript">
+    if (typeof jQuery == 'undefined') {
       document.write(unescape("%3Cscript src='js/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));
     }
-    </script>
+  </script>
 
-    <script src="js/prefixfree.min.js"></script>
-    <script src="js/scripts.min.js"></script>
-    <script src="../scripts/nav.js" type="text/javascript"></script>
-    <script src="../scripts/desplegable.js" type="text/javascript" defer></script>
-  </body>
+  <script src="js/prefixfree.min.js"></script>
+  <script src="js/scripts.min.js"></script>
+  <script src="../scripts/nav.js" type="text/javascript"></script>
+  <script src="../scripts/desplegable.js" type="text/javascript" defer></script>
+</body>
+
 </html>
