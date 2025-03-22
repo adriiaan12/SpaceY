@@ -74,7 +74,7 @@
         <form action="#" method="post">
             <!-- Paso 1 - Datos personales -->
             <div class="form-step" id="step1">
-                <h2 class="form-title">Reserva tu vuelo espacial</h2>
+                <h1 class="form-title">Reserva tu vuelo espacial</h1>
 
                 <div class="form-grid">
                     <!-- Primera fila -->
@@ -115,7 +115,7 @@
 
                     <!-- Cuarta fila -->
                     <div class="form-group">
-                        <label for="quantity">Número de Personas</label>
+                        <label for="cantidad">Número de Personas</label>
                         <input class="form-control" type="number" name="cantidad" id="cantidad" min="1" max="5"
                             value="1">
                     </div>
@@ -145,7 +145,7 @@
                 <!-- Selector de planes visible -->
                 <div class="form-group text-center">
                     <select class="form-control" id="plan" name="plan" required onchange="seleccionarPlanDesdeSelect()">
-                        <option value="">Selecciona un plan</option>
+                        <option value="" disabled selected>Selecciona un plan</option>
                         <option value="Básico">Marte</option>
                         <option value="Premium">Júpiter</option>
                         <option value="Business">Saturno</option>
@@ -161,6 +161,7 @@
                             <li>1 maleta de mano</li>
                             <li>Asiento estándar</li>
                             <li>Sin comida incluida</li>
+                            <li>Servicio básico</li>
                         </ul>
                         <button type="button" class="plan-button"
                             onclick="seleccionarPlan('Básico')">Seleccionar</button>
@@ -174,6 +175,7 @@
                             <li>2 maletas</li>
                             <li>Asiento con más espacio</li>
                             <li>Comida incluida</li>
+                            <li>Servicio VIP</li>
                         </ul>
                         <button type="button" class="plan-button"
                             onclick="seleccionarPlan('Premium')">Seleccionar
@@ -187,6 +189,7 @@
                         <ul class="plan-features">
                             <li>3 maletas</li>
                             <li>Asiento reclinable</li>
+                            <li>Comida incluida</li>
                             <li>Servicio VIP</li>
                         </ul>
                         <button type="button" class="plan-button"

@@ -48,6 +48,33 @@ function mostrarPlanes() {
         isValid = false; // Evita avanzar si el apellido no es válido
     }
 
+    const inputfechaini = document.getElementById("fechaini");
+    const inputfechafin = document.getElementById("fechafin");
+    const today = new Date().toISOString().split('T')[0]; // Fecha del sistema en formato YYYY-MM-DD
+
+// Comprobar si la fecha de inicio es menor que hoy
+if (inputfechaini.value < today) {
+    Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "La fecha de inicio no puede ser menor que la fecha de hoy!",
+    });
+    inputfechaini.value = ""; // Borra el campo si es inválido
+    isValid = false;
+} 
+// Comprobar si la fecha de inicio es mayor que la fecha de fin
+else if (inputfechaini.value > inputfechafin.value) {
+    Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "La fecha de inicio no puede ser mayor a la fecha de fin!",
+    });
+    inputfechaini.value = ""; // Borra el campo si es inválido
+    inputfechafin.value = ""; // Borra el campo si es inválido
+    isValid = false;
+}
+
+
     if (isValid) {
         // Obtener el cohete seleccionado
         const coheteSeleccionado = document.querySelector('select[name="cohetes"]').value;
@@ -147,11 +174,7 @@ function preseleccionarCohete() {
         
         if (opcionExiste) {
             selectorCohetes.value = coheteSeleccionado;
-            
-            // Opcional: si tienes alguna función que debe ejecutarse al cambiar el cohete
-            // Puedes dispararla aquí
-            // Por ejemplo, si tienes una función que actualiza precios basados en el cohete
-            // actualizarPrecios();
+
         }
     }
 }

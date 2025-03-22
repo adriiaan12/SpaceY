@@ -178,6 +178,11 @@ body {
   justify-content: center;
 }
 
+.multiple-card-slider .carousel-item:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
 
 /* Estilos para los botones de control del carrusel */
 .multiple-card-slider .carousel-control-prev,

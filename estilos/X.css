@@ -15,3 +15,35 @@ body{
 
 }
 
+.ppal{
+    margin-top: 80px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+    background: rgba(20, 20, 20, 0.75);
+    min-height: calc(100vh - 80px);
+    width: 70%;
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+}
+
+.sec1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    gap: 15px;
+    width: 100%;
+    align-items: center; /* Centra verticalmente */
+}
+.sec1 img {
+    width: 100%;
+    object-fit: cover; /* Ajusta la imagen sin distorsionar */
+    border-radius: 16px;
+}
+.sec1 p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}

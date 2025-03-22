@@ -78,6 +78,7 @@ section {
 
 
 .Cohetes {
+    background-color:#003f8302;
     position: absolute;
     /* Posiciona el texto sobre la imagen */
     top: 3%;
@@ -288,6 +289,7 @@ article li {
 
     .Cohetes {
         font-size: 2rem;
+        background-color:#003f8302
     }
 
     .image-container {
@@ -373,6 +375,7 @@ article li {
 
     .Cohetes {
         font-size: 2rem;
+        background-color:#003f8302;
     }
 
     .image-container {

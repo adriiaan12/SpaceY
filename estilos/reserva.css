@@ -180,10 +180,26 @@ form {
     color: #4CAF50;
 }
 
-.plan-features li:last-child:before {
+#planBasico .plan-features li:nth-child(3):before {
     content: "✖";
     color: #e64a19;
 }
+
+#planPremium .plan-features li:last-child:before {
+    content: "✖";
+    color: #e64a19;
+}
+
+
+#planBusiness .plan-features li:before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #4CAF50;
+}
+
+
+
 
 .plan-button {
     width: 100%;
