@@ -1430,6 +1430,12 @@ body {
   min-height: 100vh;
 }
 
+#data{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 /* Sección de los viajes */
 .section-info {
   background-color: #0d0d0d;
