@@ -15,7 +15,7 @@ body{
 
     background: url('../images/nuevo2.jpg') no-repeat center center/cover; 
     background-size:cover; 
-    margin-top:15%;
+    margin-top: 155px;
     background-attachment: fixed; 
     color: #E8ECF3;
     font-family: antonio;
@@ -24,6 +24,12 @@ body{
 }
 h2,h1 {
     font-family: 'Orbitron';
+    background-color: rgba(20, 20, 20, 0.02);
+}
+
+h3{
+    text-align: left;
+    margin-left: 40px;
 }
 
 .ppal{
@@ -65,3 +71,27 @@ h2,h1 {
 
 }
 
+
+@media (max-width: 768px) {
+    .sec1 {
+        grid-template-columns: 1fr; /* Una sola columna */
+        gap: 10px;
+    }
+    
+    .sec1 img {
+        width: 100%;
+        max-height: 300px;
+        object-fit: cover;
+        border-radius: 16px;
+    }
+
+    .ppal {
+        width: 90%; /* Ajusta el ancho para móviles */
+    }
+
+    .sec1:nth-of-type(2),
+    .sec1:nth-of-type(4) {
+        display: flex;
+        flex-direction: column-reverse; /* Imagen abajo, texto arriba */
+    }
+}
