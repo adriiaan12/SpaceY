@@ -1169,10 +1169,9 @@ h1 {
   text-decoration: none; }
 
 #navbar a:hover, #data a:hover, #controls label:hover {
-  color: #FFF; }
-
-#data a.active {
   color: #0CF; }
+
+
 
 #navbar a {
   position: absolute;
