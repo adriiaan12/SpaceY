@@ -1,6 +1,7 @@
 body {
-  background: url('../images/fotofondito.jpg') no-repeat center center/cover;
-
+  background: url('../images/nuevo2.jpg') no-repeat center center/cover;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .btn btn-primary info-btn {
@@ -40,7 +41,7 @@ body {
   width: 50%;
   margin-left: auto;
   margin-right: auto;
-  background-color: #004080; /* Azul oscuro */
+  background: linear-gradient(135deg, #1d6ce2, #0050a5);
   color: white;
   border: none;
   padding: 10px;
@@ -78,6 +79,7 @@ body {
   text-align: center;
   margin-left: 10em;
   margin-right: 10em;
+  height: 100vh;
 
 }
 
@@ -116,7 +118,7 @@ body {
 
 
 .multiple-card-slider {
-
+  
   margin-top: 10em;
   padding: 0 1em;
 }
@@ -130,6 +132,7 @@ body {
 .multiple-card-slider .carousel-inner {
   padding: 1em;
   background: linear-gradient(135deg, #1b253873, #0d59dcba);
+  background: rgba(20, 20, 20, 0.75);
   /* Fondo degradado azul */
   border-radius: 15px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
@@ -147,6 +150,7 @@ body {
   box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
   border: none;
   background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 82, 136, 0.7);
   /* Fondo translúcido */
   border-radius: 10px;
   overflow: hidden;

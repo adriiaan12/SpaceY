@@ -159,7 +159,7 @@ nav {
     /* Fondo semi-transparente */
     text-align: right;
     padding-top: 50px;
-
+    font-size: 16px;
     transform: translateX(100%);
     /* Lo oculta fuera de la pantalla */
     opacity: 0;
@@ -184,10 +184,11 @@ nav {
 .sidebar.hidden {
     transform: translateX(100%);
     /* Lo mueve hacia la derecha */
-    opacity: 0;
+    opacity: 1;
 }
 
 .sidebar a {
+    
     display: block;
     color: white;
     padding: 15px;
@@ -328,8 +329,8 @@ nav {
 
     /* Ajustes adicionales para el sidebar en móvil */
     .sidebar {
-        width: 100%;
-        right: -100%;
+        width: 40%;
+        right: -40%;
     }
 
     .sidebar.open {
@@ -344,5 +345,12 @@ nav {
     body.menu-open .contenedorppal {
         opacity: 0.3;
         pointer-events: none;
+    }
+    body.menu-open footer{
+        opacity: 0.8;
+        pointer-events: none;
+    }
+    .sidebar.scroll{
+        background:rgba(0, 0, 0, 0.404);
     }
 }

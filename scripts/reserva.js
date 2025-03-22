@@ -15,7 +15,12 @@ function retrocederPaso() {
 function dobleapellido(input) {
     let regex = /^[a-zA-ZáéíóúñÁÉÍÓÚÑ]+(?:\s+[a-zA-ZáéíóúñÁÉÍÓÚÑ]+)+$/; // Permite nombres con tildes
     if (!regex.test(input.value)) {
-        alert("Por favor, inserte dos apellidos válidos.");
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Inserta dos apellidos!",
+
+          });
         input.value = ""; // Borra el campo si es inválido
         return false;   
     }
