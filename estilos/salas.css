@@ -77,8 +77,8 @@ body {
 .align-center {
   width: 80%;
   text-align: center;
-  margin-left: 10em;
-  margin-right: 10em;
+  margin-left: auto;
+  margin-right: auto;
   height: 100vh;
 
 }
@@ -163,9 +163,10 @@ body {
 /* Contenedor fijo para la imagen */
 .multiple-card-slider .card .card-img-top {
   width: 100%;
-  height: 200px;
+  height: 350px;
   /* Ajusta esta altura según prefieras */
   object-fit: cover;
+  
   flex-shrink: 0;
 }
 
