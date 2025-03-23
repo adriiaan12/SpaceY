@@ -58,9 +58,11 @@ h3{
     
 }
 .sec1 img {
-    width: 100%;
-    object-fit: cover; /* Ajusta la imagen sin distorsionar */
-    border-radius: 16px;
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+  height: 100%; /* Ocupa toda la altura del div padre */
+  width: auto; /* Mantiene la proporción de la imagen */
+  max-width: 100%; /* Opcional: limita el ancho máximo */
+    border-radius: 16px; /* Bordes redondeados */
 }
 .sec1 p {
     
