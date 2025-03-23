@@ -155,7 +155,7 @@ nav {
     right: 0;
     width: 200px;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.002);
+    background-color: rgba(0, 0, 0, 0);
     /* Fondo semi-transparente */
     text-align: right;
     padding-top: 50px;

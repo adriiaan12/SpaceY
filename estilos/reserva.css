@@ -104,7 +104,7 @@ form {
 }
 
 /* Botones */
-.btn {
+.btns {
     padding: 12px 24px;
     border: none;
     border-radius: 8px;
@@ -117,13 +117,13 @@ form {
     letter-spacing: 1px;
 }
 
-.btn-primary {
+.btn-primarys {
     background: linear-gradient(135deg, #1d6ce2, #0050a5);
     color: white;
     box-shadow: 0 4px 15px rgba(29, 108, 226, 0.3);
 }
 
-.btn-primary:hover {
+.btn-primarys:hover {
     background: linear-gradient(135deg, #0050a5, #003d80);
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(29, 108, 226, 0.4);
