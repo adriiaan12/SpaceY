@@ -13,22 +13,7 @@ body {
     font-family: antonio;
 }
 
-/* Estilo adicional para el botón */
-.btn {
-    display: inline-block;
-    background-color: rgba(0, 0, 0, 0.6);
-    /* Fondo semitransparente para el botón */
-    padding: 10px 20px;
-    text-decoration: none;
-    color: white;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
 
-.btn:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-    /* Cambio de color cuando el ratón pasa por encima */
-}
 
 /*Estilo para la imagen principal */
 .ImagenPrincipal {
@@ -49,18 +34,58 @@ body {
 
 }
 
+/* Contenedor del botón para darle una caja */
+.button-container {
+    background: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+    padding: 15px;
+    display: flex; /* Usamos flexbox para centrar el botón */
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid white;
+    width: 175px;
+    height: 65px;
+    margin-top: 40px; /* Aumentamos el espacio entre el texto y el botón */
+}
 
+/* Aumentamos el tamaño del texto */
+.animate {
+    font-size: 40px;
+}
+
+/* Estilo del botón */
+.btn {
+    
+    display: flex; /* Flexbox para centrar el texto */
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Mayor contraste */
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%; /* Hace que el botón ocupe todo el ancho del contenedor */
+    height: 100%; /* Hace que el botón ocupe todo el alto del contenedor */
+    font-size: 20px; /* Aumentamos el tamaño del texto */
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: black;
+    transform: scale(1.05);
+}
+
+/* Ajuste de la posición para subir el botón */
 .feature {
-
     position: absolute;
     z-index: 1;
     color: white;
     text-align: center;
     padding: 20px;
-    top: 80%;
+    top: 60%; /* Antes estaba en 80%, lo subimos */
     left: 10%;
     transform: translate(-50%, -50%);
-
 }
 
 
