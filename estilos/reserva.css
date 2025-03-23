@@ -95,6 +95,7 @@ form {
     background: rgba(0, 82, 136, 0.9);
     border-color: #1d6ce2;
     box-shadow: 0 0 0 3px rgba(29, 108, 226, 0.25);
+    color: white;
 }
 
 /* Placeholder */
