@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Panel de Control</title>
+
+
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="assets/bootstrap/dist/css/bootstrap.min.css">
+
+    <script type="text/javascript" src="js/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="js/wsinvocations.js"></script>
+
+    <!-- Hoja de estilo -->
+
+    <link rel="stylesheet" href="./estilos/reserva.css" type="text/css">
+    <link rel="stylesheet" href="./estilos/general.css" type="text/css">
+    <link rel="stylesheet" href="./estilos/index.css" type="text/css">
+    <link rel="stylesheet" href="./estilos/IndexViajes.css" type="text/css">
+
+    <!-- icono -->
+  <link rel="shortcut icon" href="./images/logospacey-icono.png">
+</head>
+
+<body>
+    <h1>Viajes de los Clientes</h1>
+
+
+    <input type="button" value="POST MOVIE 'Dunkirk'" onclick="postViaje()" />
+    <button type="button" onclick="window.location.href='reserva.html'">Reservar recurso</button>
+
+    <input type="button" value="GET MOVIES" onclick="getAllViajes()" />
+
+    <form method="POST" action="/viajes?_method=DELETE">
+        <button type="submit">Borrar Todo</button>
+    </form>
+
+    <input type="text" id="viajeId" name="_id" placeholder="ID del viaje">
+
+    <form id="updateForm" method="POST">
+
+        <input type="text" id="nombre" name="nombre" placeholder="nombre">
+        <input type="text" name="apellidos" placeholder="apellidos">
+        <input type="text" name="correo" placeholder="correo">
+        <input type="text" name="telefono" placeholder="telefono">
+        <input type="number" name="cantidad" placeholder="cantidad" min="1" max="5">
+
+        <button type="submit" id="BotonActualizar">Actualizar Elemento</button>
+        <button type="submit" id="BotonBorrar">Borrar Elemento</button>
+        <button type="submit" id="BotonVer">Ver Elemento</button>
+
+    </form>
+
+    <h3 id="resViaje"></h3>
+
+    <script>
+        document.getElementById("updateForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Evita que la página se recargue
+
+            let viajeId = document.getElementById("viajeId").value; // Obtiene el ID ingresado
+            if (!viajeId) {
+                alert("Por favor, ingresa un ID válido.");
+                return;
+            }
+
+            let actionUrl = "";
+            let method = "";
+
+            if (event.submitter.id === "BotonActualizar") {
+                actionUrl = "/viajes/" + viajeId;
+                method = "PUT";
+            } else if (event.submitter.id === "BotonBorrar") {
+                actionUrl = "/viajes/" + viajeId;
+                method = "DELETE";
+            } else if (event.submitter.id === "BotonVer") {
+                getViaje(viajeId);
+                return;
+            }
+
+            // Datos del formulario
+            let formData = new FormData(this);
+            let jsonData = {};
+            formData.forEach((value, key) => jsonData[key] = value);
+
+            // Petición AJAX
+            fetch(actionUrl, {
+                method: method,
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(jsonData)
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log("Respuesta del servidor:", data);
+                    alert("Operación realizada con éxito");
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                    alert("Hubo un problema con la solicitud");
+                });
+        });
+
+    </script>
+</body>
+
+</html>

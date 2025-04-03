@@ -1,87 +1,3 @@
-function getMovie(movieId) {
-    let myUrl = "/movies/" + movieId;
-    $.ajax({
-        type: "GET",
-        dataType: "json",
-        url: myUrl,
-        success: function (data) {
-            $("#resPelicula").html(JSON.stringify(data));
-        },
-        error: function (res) {
-            let mensaje = JSON.parse(res.responseText);
-            alert("ERROR: " + mensaje.msg);
-        }
-    });
-}
-
-function postMovie() {
-    $.ajax({
-        type: "POST",
-        url: "/movies",
-        contentType: "application/json",
-        dataType: "text",
-        data: JSON.stringify({
-            "title": "Dunkirk",
-            "director": "Christopher Nolan",
-            "year": 2017
-        }),
-        success: function (data) {
-            $("#resPelicula").html(data);
-        },
-        error: function (res) {
-            alert("ERROR: " + res.statusText);
-        }
-    });
-}
-
-function getAllMovies() {
-    let myUrl = "/movies";
-    $.ajax({
-        type: "GET",
-        dataType: "json",
-        url: myUrl,
-        success: function (data) {
-            $("#resPelicula").html(JSON.stringify(data));
-        },
-        error: function (res) {
-            console.error("ERROR:", res.status, res.statusText);
-        }
-    });
-}
-
-function getHello() {
-    $.ajax({
-        type: "GET",
-        url: "http://localhost:8080/",
-        success: function (data) {
-            $("#resGetHello").html(data);
-        },
-        error: function (res) {
-            alert("ERROR: " + res.statusText);
-        }
-    });
-}
-
-function getHelloAndGoodbye() {
-    $.when(
-        $.ajax({
-            type: "GET",
-            url: "http://localhost:8080/hello"
-        }),
-        $.ajax({
-            type: "GET",
-            url: "http://localhost:8080/goodbye"
-        })
-    ).done(function (helloRes, goodbyeRes) {
-        $("#resGetHello").html(helloRes[0]);
-        $("#resGetGoodbye").html(goodbyeRes[0]);
-    }
-    ).fail(function (res) {
-        alert("ERROR: " + res.statusText);
-    });
-}
-
-
 function getViaje(viajeId) {
     let myUrl = "/viajes/" + viajeId;
     $.ajax({
@@ -89,7 +5,13 @@ function getViaje(viajeId) {
         dataType: "json",
         url: myUrl,
         success: function (data) {
-            $("#resViaje").html(JSON.stringify(data));
+            let resultHTML = "<h3>Detalles del Viaje</h3>";
+            resultHTML += "<ul>";
+            for (let key in data) {
+                resultHTML += `<li><strong>${key}:</strong> ${data[key]}</li>`;
+            }
+            resultHTML += "</ul>";
+            $("#resViaje").html(resultHTML);
         },
         error: function (res) {
             let mensaje = JSON.parse(res.responseText);
@@ -97,6 +19,7 @@ function getViaje(viajeId) {
         }
     });
 }
+
 
 function postViaje() {
     $.ajax({
@@ -125,13 +48,36 @@ function getAllViajes() {
         dataType: "json",
         url: myUrl,
         success: function (data) {
-            $("#resViaje").html(JSON.stringify(data));
+            if (!Array.isArray(data)) {
+                console.error("La respuesta no es un array:", data);
+                $("#resViaje").html("<p>Error: la respuesta del servidor no es válida.</p>");
+                return;
+            }
+
+            let resultHTML = "<h3>Lista de Viajes</h3>";
+            resultHTML += "<ul>";
+
+            data.forEach(viaje => {
+                resultHTML += "<li>";
+                resultHTML += "<strong>ID:</strong> " + viaje._id + "<br>";
+                resultHTML += "<strong>Nombre:</strong> " + (viaje.nombre || "N/A") + "<br>";
+                resultHTML += "<strong>Apellidos:</strong> " + (viaje.apellidos || "N/A") + "<br>";
+                resultHTML += "<strong>Correo:</strong> " + (viaje.correo || "N/A") + "<br>";
+                resultHTML += "<strong>Teléfono:</strong> " + (viaje.telefono || "N/A") + "<br>";
+                resultHTML += "<strong>Cantidad:</strong> " + (viaje.cantidad || "N/A");
+                resultHTML += "</li><hr>";
+            });
+
+            resultHTML += "</ul>";
+            $("#resViaje").html(resultHTML);
         },
         error: function (res) {
             console.error("ERROR:", res.status, res.statusText);
+            $("#resViaje").html("<p>Error al obtener los datos.</p>");
         }
     });
 }
+
 
 function deleteViaje(viajeId) {  
     $.ajax({
