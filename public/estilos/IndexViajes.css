@@ -1,15 +1,31 @@
-/* Estilos generales */
+/* Mantener las fuentes y el fondo como estaban */
+@font-face {
+    font-family: 'antonio';
+    src: url("../images/Antonio-SemiBold.ttf") format(Truetype);
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 20px;
-    text-align: center;
+    background: url('../images/nuevo2.jpg') no-repeat center center/cover;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #E8ECF3;
+    font-family: antonio;
+    
 }
 
 h1 {
-    color: #333;
+    color: white;
 }
+.btnconfirmar{
+    display:none;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
 
 /* Botones */
 button, input[type="button"], input[type="submit"] {
@@ -23,32 +39,91 @@ button, input[type="button"], input[type="submit"] {
     font-size: 16px;
 }
 
-button:hover, input[type="button"]:hover, input[type="submit"]:hover {
-    background-color: #0056b3;
+
+
+.contenedorppal {
+    background: rgba(20, 20, 20, 0.75);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente el contenido */
+    justify-content: center; /* Centra verticalmente el contenido */
+    max-width: 850px;
+    padding: 30px;
+    margin: auto;
+    margin-top: 150px;
+    min-height: 50vh; /* Mínimo de altura en vez de fijo */
+    height: auto; /* Permite que crezca según el contenido */
 }
+
+footer{
+    margin-top: auto;
+    position: relative; /* Cambiado de absolute/fixed a relative */
+    bottom: -34vh;
+}
+
+
 
 /* Formularios */
 form {
-    background-color: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    display: inline-block;
-    text-align: left;
-    margin: 10px auto;
+    color: #E8ECF3;
+
+
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width:90%;
+    padding: 30px;
+}
+#viajeId {
+    width: 90%;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+
 }
 
-input[type="text"], input[type="number"] {
-    width: calc(100% - 20px);
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+/* Contenedor de los botones en filas de 3 */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    margin: auto;
 }
+
+/* Ocultar los inputs hasta que se haga clic en el botón "Actualizar Elemento" */
+.form-group {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    display: none;
+
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #add8e6;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: inline-block;
+    color: #E8ECF3;
+}
+
 
 /* Resultado de viajes */
 #resViaje {
-    background-color: white;
+    color: white;
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -57,3 +132,5 @@ input[type="text"], input[type="number"] {
     display: inline-block;
     max-width: 600px;
 }
+
+
