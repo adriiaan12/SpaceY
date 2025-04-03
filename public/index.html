@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Películas</title>
+
+    <script type="text/javascript" src="js/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="js/wsinvocations.js"></script>
+</head>
+
+<body>
+    <h1>Películas Cliente</h1>
+
+    <input type="button" value="GET MOVIE 'The Lion King'" onclick="getViaje('67ee6c375359cef6da846acc')" />
+    <input type="button" value="POST MOVIE 'Dunkirk'" onclick="postViaje()" />
+    <input type="button" value="GET MOVIE 'Dunkirk'" onclick="getViaje('67ee6c375359cef6da846acc')" />
+    <input type="button" value="GET MOVIES" onclick="getAllViajes()" />
+    <input type="button" value="DELETE DUNKIRK" onclick="deleteViaje('67ee6c375359cef6da846acc')" />
+    <input type="button" value="PUT DUNKIRK"
+        onclick="putViaje('67ee6c375359cef6da846acc', {title: 'Dunkiiiiiirk', director: 'Christopher Nolan', year: 2017})" />
+    
+    <form method="POST" action="/viajes?_method=DELETE">
+        <button type="submit">Delete resource</button>
+    </form>
+
+    <form method="POST" action="/viajes/67ee7060ebd8129b4a17f5ba?_method=DELETE">
+        <button type="submit">Delete viaje Concreto</button>
+    </form>
+
+    <input type="text" id="viajeId" name="_id" placeholder="ID del viaje">
+    <form id="updateForm" method="POST">
+        
+        <input type="text" name="title" placeholder="Nuevo título">
+        <button type="submit">Actualizar recurso</button>
+    </form>
+
+
+    <h3 id="resViaje"></h3>
+
+    <script>
+    document.getElementById("updateForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Evita el envío automático del formulario
+
+        let viajeId = document.getElementById("viajeId").value; // Obtiene el ID ingresado
+        if (!viajeId) {
+            alert("Por favor, ingresa un ID válido.");
+            return;
+        }
+
+        this.action = "/viajes/" + viajeId + "?_method=PUT"; // Construye la URL con el ID
+        this.submit(); // Envía el formulario
+    });
+</script>
+</body>
+
+</html>
