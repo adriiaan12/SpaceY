@@ -27,7 +27,7 @@ router.post("/", async (req, res) => {
     else {
         try {
             await viajesService.add(viajes);
-            res.status(201).send({ msg: 'Película creada!' });
+            res.status(200).json({ msg: "Viaje creado correctamente." }); // ✅ Devuelve JSON
         } catch (error) {
             res.status(500).send({ msg: error.message });
         }

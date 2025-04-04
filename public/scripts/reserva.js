@@ -178,6 +178,53 @@ function preseleccionarCohete() {
         }
     }
 }
+$(document).ready(function() {
+    $("#miFormulario").submit(function(event) { 
+        event.preventDefault(); // ⛔ Bloquear la recarga de la página
+        console.log("Formulario interceptado, no se envía tradicionalmente.");
+
+        const formData = {
+            nombre: $("#nombres").val(),
+            apellidos: $("#apellidos").val(),
+            correo: $("#correo").val(),
+            telefono: $("#telefono").val(),
+            fechaini: $("#fechaini").val(),
+            fechafin: $("#fechafin").val(),
+            cantidad: $("#cantidad").val(),
+            cohete: $("#cohetes").val(),
+            plan: $("#plan").val()
+        };
+
+        $.ajax({
+            type: "POST",
+            url: "/viajes",
+            contentType: "application/json",
+            dataType: "json",
+            data: JSON.stringify(formData),
+            success: function() {
+                Swal.fire({
+                    icon: "success",
+                    title: "¡Éxito!",
+                    text: "El viaje se ha registrado correctamente.",
+                    confirmButtonText: "Aceptar"
+                });
+
+                // Limpiar el formulario después de la alerta
+                
+            },
+            error: function(res) {
+                Swal.fire({
+                    icon: "error",
+                    title: "Error",
+                    text: "No se pudo crear el viaje. Intenta de nuevo.",
+                    confirmButtonText: "Aceptar"
+                });
+            }
+        });
+    });
+});
+
+
 
 // Ejecutar la función cuando la página se carga
 document.addEventListener('DOMContentLoaded', preseleccionarCohete);

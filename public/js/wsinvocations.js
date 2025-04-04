@@ -7,9 +7,18 @@ function getViaje(viajeId) {
         success: function (data) {
             let resultHTML = "<h3>Detalles del Viaje</h3>";
             resultHTML += "<ul>";
-            for (let key in data) {
-                resultHTML += `<li><strong>${key}:</strong> ${data[key]}</li>`;
-            }
+            resultHTML += "<li>";
+                resultHTML += "<strong>ID:</strong> " + data._id + "<br>";
+                resultHTML += "<strong>Nombre:</strong> " + (data.nombre || "N/A") + "<br>";
+                resultHTML += "<strong>Apellidos:</strong> " + (data.apellidos || "N/A") + "<br>";
+                resultHTML += "<strong>Correo:</strong> " + (data.correo || "N/A") + "<br>";
+                resultHTML += "<strong>Teléfono:</strong> " + (data.telefono || "N/A") + "<br>";
+                resultHTML += "<strong>Fecha de Salida:</strong> " + (data.fechaini || "N/A") + "<br>";
+                resultHTML += "<strong>Fecha de Llegada:</strong> " + (data.fechafin || "N/A") + "<br>";
+                resultHTML += "<strong>Cantidad:</strong> " + (data.cantidad || "N/A") + "<br>";
+                resultHTML += "<strong>Cohete:</strong> " + (data.cohete || "N/A") + "<br>";
+                resultHTML += "<strong>Plan Seleccionado:</strong> " + (data.plan || "N/A");
+                resultHTML += "</li><hr>";
             resultHTML += "</ul>";
             $("#resViaje").html(resultHTML);
         },
@@ -36,7 +45,7 @@ function postViaje() {
             $("#resViaje").html(data);
         },
         error: function (res) {
-            alert("ERROR: " + res.statusText);
+            alert("ERReOR: " + res.statusText);
         }
     });
 }
@@ -64,7 +73,11 @@ function getAllViajes() {
                 resultHTML += "<strong>Apellidos:</strong> " + (viaje.apellidos || "N/A") + "<br>";
                 resultHTML += "<strong>Correo:</strong> " + (viaje.correo || "N/A") + "<br>";
                 resultHTML += "<strong>Teléfono:</strong> " + (viaje.telefono || "N/A") + "<br>";
-                resultHTML += "<strong>Cantidad:</strong> " + (viaje.cantidad || "N/A");
+                resultHTML += "<strong>Fecha de Salida:</strong> " + (viaje.fechaini || "N/A") + "<br>";
+                resultHTML += "<strong>Fecha de Llegada:</strong> " + (viaje.fechafin || "N/A") + "<br>";
+                resultHTML += "<strong>Cantidad:</strong> " + (viaje.cantidad || "N/A") + "<br>";
+                resultHTML += "<strong>Cohete:</strong> " + (viaje.cohete || "N/A") + "<br>";
+                resultHTML += "<strong>Plan Seleccionado:</strong> " + (viaje.plan || "N/A");
                 resultHTML += "</li><hr>";
             });
 

@@ -74,7 +74,7 @@
 
     <!-- Modifica tu HTML actual a esta estructura -->
     <div class="contenedorppal">
-        <form action="/viajes" method="POST">
+        <form id="miFormulario" action="/viajes" method="POST">
             <!-- Paso 1 - Datos personales -->
             <div class="form-step" id="step1">
                 <h1 class="form-title">Reserva tu vuelo espacial</h1>
@@ -149,9 +149,9 @@
                 <div class="form-group text-center">
                     <select class="form-control" id="plan" name="plan" required onchange="seleccionarPlanDesdeSelect()">
                         <option value="" disabled selected>Selecciona un plan</option>
-                        <option value="Básico">Marte</option>
-                        <option value="Premium">Júpiter</option>
-                        <option value="Business">Saturno</option>
+                        <option value="Marte">Marte</option>
+                        <option value="Júpiter">Júpiter</option>
+                        <option value="Saturno">Saturno</option>
                     </select>
                 </div>
 
@@ -167,7 +167,7 @@
                             <li>Servicio básico</li>
                         </ul>
                         <button type="button" class="plan-button"
-                            onclick="seleccionarPlan('Básico')">Seleccionar</button>
+                            onclick="seleccionarPlan('Marte')">Seleccionar</button>
                     </div>
 
                     <!-- Opción Premium -->
@@ -181,7 +181,7 @@
                             <li>Servicio VIP</li>
                         </ul>
                         <button type="button" class="plan-button"
-                            onclick="seleccionarPlan('Premium')">Seleccionar
+                            onclick="seleccionarPlan('Júpiter')">Seleccionar
                         </button>
                     </div>
 
@@ -196,15 +196,15 @@
                             <li>Servicio VIP</li>
                         </ul>
                         <button type="button" class="plan-button"
-                            onclick="seleccionarPlan('Business')">Seleccionar
+                            onclick="seleccionarPlan('Saturno')">Seleccionar
                         </button>
                     </div>
                 </div>
                 <div class="botones mt-4">
-                    <button type="button" class="btn btn-primarys btn-back"
+                    <button type="button" class="btns btn-primarys btn-back"
                         onclick="retrocederPaso()">Retroceder
                     </button>
-                    <button type="submit" id="confirmarBtn" class="btn btn-primarys">Confirmar Reserva
+                    <button type="submit" id="confirmarBtn" class="btns btn-primarys">Confirmar Reserva
 
                     </button>
 
